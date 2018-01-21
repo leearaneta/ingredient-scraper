@@ -4,7 +4,7 @@
 		module="playingwithcats_2.12"
 		revision="0.1"
 		status="integration"
-		publication="20180114135349"
+		publication="20180120105955"
 	>
 		<description>
 		playingWithCats
@@ -36,5 +36,6 @@
 		<dependency org="org.jsoup" name="jsoup" rev="1.8.3" conf="compile->default(compile)"/>
 		<dependency org="org.json4s" name="json4s-native_2.12" rev="3.6.0-M2" conf="compile->default(compile)"/>
 		<dependency org="com.softwaremill.sttp" name="core_2.12" rev="1.1.4" conf="compile->default(compile)"/>
+		<dependency org="com.softwaremill.sttp" name="async-http-client-backend-future_2.12" rev="1.1.4" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
