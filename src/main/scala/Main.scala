@@ -2,6 +2,8 @@ import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 
 import scala.concurrent.Future
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.util.{Success, Failure}
 import scala.collection.JavaConverters._
 import sys.process._
 import org.json4s._
@@ -19,7 +21,7 @@ object Main extends App {
     .getElementsByTag("li")
     .asScala.toList
     .map(_.text)
-    .fold("") {_ + "\n" + _}
+    .fold("") { _ + "\n" + _ }
 
   def standardize(s: String): String = {
     val path = "python ../ingredient-phrase-tagger/bin/"
@@ -47,30 +49,34 @@ object Main extends App {
     sttp.get(requestURL).send()
   }
 
+  def extractJSON(s: String): Boolean = {
+    val JArray(x) = parse(s) \ "parsed"
+    x.isEmpty
+  }
+
   val url = "http://allrecipes.com/recipe/9027/kung-pao-chicken/"
   val doc = Jsoup.connect(url).timeout(10000).get()
+  val unorderedLists = doc.getElementsByTag("ul").asScala.toList
 
-  // begin hard coding stuff to remove
-  doc.select("[ng-cloak]").remove()
-  // end hard coding stuff to remove
-
-  val unorderedLists: List[Element] = doc.getElementsByTag("ul").asScala.toList
   unorderedLists
     .map(stringify) // take all raw text and separate with newlines
     .map(standardize) // standardize using model
     .map(format) // convert to ingredient case class
     .filter(isIngredientList) // take out most things that aren't ingredients
-    .flatten
-    .groupBy {
-      case Ingredient(_, None, None) => "a"
-      case _ => "b"
+    .flatten // combine to one list of ingredients
+    .groupBy { // separate between sketchy and normal ingredients
+      case Ingredient(_, None, None) => "sketchy"
+      case _ => "normal"
     }
     .map {
-      case ("a", sketchyIngredients) => {
-        val futures: Future[List[Response[String]]] = Future.traverse(sketchyIngredients)(makeRequest)
-        // somehow extract the responses
-      } // return a new list of nonSketchyIngredients
-      case _ => "bye"
+      case ("sketchy", sketchyIngredients) => Future.traverse(sketchyIngredients)(makeRequest) onComplete {
+        case Success(r) => r.map(_.body.map(extractJSON).getOrElse(false))
+          .zip(sketchyIngredients)
+          .filter { case (bool, _) => bool }
+          .map { case (_, value) => value }
+        case Failure(_) => List(Ingredient("a", Some("b"), Some("c")))
+      }
+      case ("normal", _) => _
     }
 
 }
