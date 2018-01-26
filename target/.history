@@ -17,3 +17,8 @@ console
 exit
 console
 exit
+console
+sbt
+console
+quit
+exit

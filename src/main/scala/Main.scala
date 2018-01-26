@@ -11,7 +11,7 @@ import org.json4s.native.JsonMethods._
 import com.softwaremill.sttp._
 import com.softwaremill.sttp.asynchttpclient.future.AsyncHttpClientFutureBackend
 
-case class Ingredient(name: String, unit: Option[String], qty: Option[String])
+case class Ingredient(name: Option[String], unit: Option[String], qty: Option[String])
 
 object Main extends App {
 
@@ -49,13 +49,19 @@ object Main extends App {
     sttp.get(requestURL).send()
   }
 
-  def extractJSON(s: String): Boolean = {
-    val JArray(x) = parse(s) \ "parsed"
+  def extractJSON(r: Response[String]): Boolean = {
+    val JSON = r.unsafeBody
+    val JArray(x) = parse(JSON) \ "parsed"
     x.isEmpty
   }
 
   val url = "http://allrecipes.com/recipe/9027/kung-pao-chicken/"
   val doc = Jsoup.connect(url).timeout(10000).get()
+
+  // begin hard coding stuff to remove
+    doc.select("[ng-cloak]").remove()
+  // end hard coding stuff to remove
+
   val unorderedLists = doc.getElementsByTag("ul").asScala.toList
 
   unorderedLists
@@ -70,13 +76,14 @@ object Main extends App {
     }
     .map {
       case ("sketchy", sketchyIngredients) => Future.traverse(sketchyIngredients)(makeRequest) onComplete {
-        case Success(r) => r.map(_.body.map(extractJSON).getOrElse(false))
+        case Success(r: List[Response[String]]) => r
+          .map(extractJSON)
           .zip(sketchyIngredients)
           .filter { case (bool, _) => bool }
           .map { case (_, value) => value }
-        case Failure(_) => List(Ingredient("a", Some("b"), Some("c")))
-      }
-      case ("normal", _) => _
+        case _ => List.empty[Ingredient]
+      } // should just use monad transformers
+      case ("normal", normalIngredients) => normalIngredients
     }
 
 }
