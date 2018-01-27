@@ -1,6 +1,7 @@
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 
+import cats.implicits._
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.util.{Success, Failure}
@@ -49,7 +50,7 @@ object Main extends App {
     sttp.get(requestURL).send()
   }
 
-  def extractJSON(r: Response[String]): Boolean = {
+  def validateIngredients(r: Response[String]): Boolean = {
     val JSON = r.unsafeBody
     val JArray(x) = parse(JSON) \ "parsed"
     x.isEmpty
@@ -64,26 +65,28 @@ object Main extends App {
 
   val unorderedLists = doc.getElementsByTag("ul").asScala.toList
 
-  unorderedLists
+  val (normalIngredients: List[Ingredient], sketchyIngredients: List[Ingredient]) = unorderedLists
     .map(stringify) // take all raw text and separate with newlines
     .map(standardize) // standardize using model
     .map(format) // convert to ingredient case class
     .filter(isIngredientList) // take out most things that aren't ingredients
     .flatten // combine to one list of ingredients
-    .groupBy { // separate between sketchy and normal ingredients
-      case Ingredient(_, None, None) => "sketchy"
-      case _ => "normal"
-    }
-    .map {
-      case ("sketchy", sketchyIngredients) => Future.traverse(sketchyIngredients)(makeRequest) onComplete {
-        case Success(r: List[Response[String]]) => r
-          .map(extractJSON)
-          .zip(sketchyIngredients)
-          .filter { case (bool, _) => bool }
-          .map { case (_, value) => value }
-        case _ => List.empty[Ingredient]
-      } // should just use monad transformers
-      case ("normal", normalIngredients) => normalIngredients
+    .partition { // separate between sketchy and normal ingredients
+      case Ingredient(_, None, None) => false
+      case _ => true
     }
 
+   val ingredients: Future[List[Ingredient]] = for {
+     validatedIngredients <- sketchyIngredients.traverse(makeRequest) map { _
+       .map(validateIngredients)
+       .zip(sketchyIngredients)
+       .filter { case (bool, _) => bool }
+       .map { case (_, value) => value }
+     }
+   } yield normalIngredients ::: validatedIngredients
+
+  ingredients onComplete {
+    case Success(r) => println(r)
+    case Failure(e) => "bye" // throw exception probably
+  }
 }
