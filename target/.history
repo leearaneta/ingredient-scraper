@@ -22,3 +22,5 @@ sbt
 console
 quit
 exit
+run
+exit

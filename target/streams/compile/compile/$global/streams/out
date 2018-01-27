@@ -1,6 +1,2 @@
-[0m[[0m[33mwarn[0m] [0m[0m/Users/lee/Development/playingWithCats/src/main/scala/Main.scala:76:10: match may not be exhaustive.[0m
-[0m[[0m[33mwarn[0m] [0m[0mIt would fail on the following input: (_, _)[0m
-[0m[[0m[33mwarn[0m] [0m[0m    .map {[0m
-[0m[[0m[33mwarn[0m] [0m[0m         ^[0m
 [0m[[0m[33mwarn[0m] [0m[0mthere was one feature warning; re-run with -feature for details[0m
-[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

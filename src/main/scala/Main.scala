@@ -1,6 +1,5 @@
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
-
 import cats.implicits._
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -16,6 +15,7 @@ case class Ingredient(name: Option[String], unit: Option[String], qty: Option[St
 
 object Main extends App {
 
+  implicit val sttpBackend = AsyncHttpClientFutureBackend()
   implicit val formats = DefaultFormats
 
   def stringify(ul: Element): String = ul
@@ -25,7 +25,7 @@ object Main extends App {
     .fold("") { _ + "\n" + _ }
 
   def standardize(s: String): String = {
-    val path = "python ../ingredient-phrase-tagger/bin/"
+    val path = "python src/ingredient-phrase-tagger/bin/" // don't use relative paths
     val parserFile = path + "parse-ingredients.py"
     val converterFile = path + "convert-to-json.py"
     Seq("echo", s) #| parserFile #| converterFile !! // wrap this in IO monad or something
@@ -33,26 +33,22 @@ object Main extends App {
 
   def format(s: String): List[Ingredient] = parse(s).extract[List[Ingredient]]
 
-  def isIngredientList(l: List[Ingredient]): Boolean = {
-    if (l.isEmpty) return false
-    val valid: List[Ingredient] = l filter {
+  def isIngredientList(l: List[Ingredient]): Boolean =
+    if (l.isEmpty) false
+    else l.count {
       case Ingredient(_, Some(_), Some(_)) => true
       case _ => false
-    }
-    valid.length / l.length.toFloat >= .75 // some arbitrary number
-  }
+    } / l.length.toFloat >= .75 // some arbitrary number
 
   def makeRequest(i: Ingredient): Future[Response[String]] = {
-    implicit val sttpBackend = AsyncHttpClientFutureBackend()
     val appID = "5c3b30f0" // hide these
     val appKey = "6e4e5e4c702f73d47f0f1cd6937b225b"
     val requestURL = uri"https://api.edamam.com/api/food-database/parser?ingr=${i.name}&app_id=$appID&app_key=$appKey"
     sttp.get(requestURL).send()
   }
 
-  def validateIngredients(r: Response[String]): Boolean = {
-    val JSON = r.unsafeBody
-    val JArray(x) = parse(JSON) \ "parsed"
+  def validateIngredient(r: Response[String]): Boolean = {
+    val JArray(x) = parse(r.unsafeBody) \ "parsed"
     x.isEmpty
   }
 
@@ -78,7 +74,7 @@ object Main extends App {
 
    val ingredients: Future[List[Ingredient]] = for {
      validatedIngredients <- sketchyIngredients.traverse(makeRequest) map { _
-       .map(validateIngredients)
+       .map(validateIngredient)
        .zip(sketchyIngredients)
        .filter { case (bool, _) => bool }
        .map { case (_, value) => value }
