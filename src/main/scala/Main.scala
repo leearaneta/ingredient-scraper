@@ -1,3 +1,4 @@
+import AppConfig._
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 import cats.implicits._
@@ -25,13 +26,14 @@ object Main extends App {
     .fold("") { _ + "\n" + _ }
 
   def standardize(s: String): String = {
-    val path = "python src/ingredient-phrase-tagger/bin/" // don't use relative paths
+    val path = "python src/main/ingredient-phrase-tagger/bin/" // put this in separate docker container
     val parserFile = path + "parse-ingredients.py"
     val converterFile = path + "convert-to-json.py"
     Seq("echo", s) #| parserFile #| converterFile !! // wrap this in IO monad or something
   }
 
-  def format(s: String): List[Ingredient] = parse(s).extract[List[Ingredient]]
+  def format(s: String): List[Ingredient] =
+    parse(s).extract[List[Ingredient]]
 
   def isIngredientList(l: List[Ingredient]): Boolean =
     if (l.isEmpty) false
@@ -40,49 +42,57 @@ object Main extends App {
       case _ => false
     } / l.length.toFloat >= .75 // some arbitrary number
 
-  def makeRequest(i: Ingredient): Future[Response[String]] = {
-    val appID = "5c3b30f0" // hide these
-    val appKey = "6e4e5e4c702f73d47f0f1cd6937b225b"
-    val requestURL = uri"https://api.edamam.com/api/food-database/parser?ingr=${i.name}&app_id=$appID&app_key=$appKey"
-    sttp.get(requestURL).send()
+  def makeRequest(i: Ingredient): Future[Response[String]] = sttp
+    .get(uri"https://api.edamam.com/api/food-database/parser?ingr=${i.name}&app_id=$appID&app_key=$appKey")
+    .send()
+
+  def validateIngredient(r: Response[String]): Boolean =
+    parse(r.unsafeBody) \ "parsed" match { case JArray(l) => l.isEmpty }
+
+  def suspectList(e: Element): Boolean = {
+    if (e.children.size < 3) false
+    else e.children.asScala.toList
+      .map { child => (child.tagName, child.className) }
+      .groupBy(identity).mapValues(_.size).values
+      .max >= e.children.size / 2
   }
 
-  def validateIngredient(r: Response[String]): Boolean = {
-    val JArray(x) = parse(r.unsafeBody) \ "parsed"
-    x.isEmpty
-  }
-
-  val url = "http://allrecipes.com/recipe/9027/kung-pao-chicken/"
+  val url = "https://www.yummly.com/#recipe/Garlic-Parmesan-Kale-Pasta-Meal-Prep-2285925"
   val doc = Jsoup.connect(url).timeout(10000).get()
 
   // begin hard coding stuff to remove
     doc.select("[ng-cloak]").remove()
   // end hard coding stuff to remove
 
-  val unorderedLists = doc.getElementsByTag("ul").asScala.toList
-
-  val (normalIngredients: List[Ingredient], sketchyIngredients: List[Ingredient]) = unorderedLists
-    .map(stringify) // take all raw text and separate with newlines
-    .map(standardize) // standardize using model
-    .map(format) // convert to ingredient case class
-    .filter(isIngredientList) // take out most things that aren't ingredients
-    .flatten // combine to one list of ingredients
-    .partition { // separate between sketchy and normal ingredients
+  def method1: Unit = {
+    val unorderedLists = doc.getElementsByTag("ul").asScala.toList
+    val (normalIngredients: List[Ingredient], sketchyIngredients: List[Ingredient]) = unorderedLists
+      .map(stringify) // take all raw text and separate with newlines
+      .map(standardize) // standardize using model
+      .map(format) // convert to ingredient case class
+      .filter(isIngredientList) // take out most things that aren't ingredients
+      .flatten // combine to one list of ingredients
+      .partition { // separate between sketchy and normal ingredients
       case Ingredient(_, None, None) => false
       case _ => true
     }
 
-   val ingredients: Future[List[Ingredient]] = for {
-     validatedIngredients <- sketchyIngredients.traverse(makeRequest) map { _
-       .map(validateIngredient)
-       .zip(sketchyIngredients)
-       .filter { case (bool, _) => bool }
-       .map { case (_, value) => value }
-     }
-   } yield normalIngredients ::: validatedIngredients
+    val ingredients: Future[List[Ingredient]] = for {
+      validatedIngredients <- sketchyIngredients.traverse(makeRequest) map { _
+        .map(validateIngredient) // make api call to validate
+        .zip(sketchyIngredients)
+        .filter { case (bool, _) => bool } // filter out ones that are invalid
+        .map { case (_, value) => value }
+      }
+    } yield normalIngredients ::: validatedIngredients
 
-  ingredients onComplete {
-    case Success(r) => println(r)
-    case Failure(e) => "bye" // throw exception probably
+    ingredients onComplete {
+      case Success(r) => println(r)
+      case Failure(e) => println(e) // throw exception probably
+    }
+  }
+
+  def method2: Unit = {
+
   }
 }
