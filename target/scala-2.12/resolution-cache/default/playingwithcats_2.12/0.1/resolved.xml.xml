@@ -4,7 +4,7 @@
 		module="playingwithcats_2.12"
 		revision="0.1"
 		status="integration"
-		publication="20180120105955"
+		publication="20180220222329"
 	>
 		<description>
 		playingWithCats
@@ -34,8 +34,10 @@
 		<dependency org="org.scala-lang" name="scala-library" rev="2.12.4" conf="scala-tool->default,optional(default);compile->default(compile)"/>
 		<dependency org="org.typelevel" name="cats-core_2.12" rev="1.0.0" conf="compile->default(compile)"/>
 		<dependency org="org.jsoup" name="jsoup" rev="1.8.3" conf="compile->default(compile)"/>
-		<dependency org="org.json4s" name="json4s-native_2.12" rev="3.6.0-M2" conf="compile->default(compile)"/>
 		<dependency org="com.softwaremill.sttp" name="core_2.12" rev="1.1.4" conf="compile->default(compile)"/>
 		<dependency org="com.softwaremill.sttp" name="async-http-client-backend-future_2.12" rev="1.1.4" conf="compile->default(compile)"/>
+		<dependency org="io.circe" name="circe-core_2.12" rev="0.9.1" conf="compile->default(compile)"/>
+		<dependency org="io.circe" name="circe-generic_2.12" rev="0.9.1" conf="compile->default(compile)"/>
+		<dependency org="io.circe" name="circe-parser_2.12" rev="0.9.1" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

@@ -2,13 +2,14 @@ import AppConfig._
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 import cats.implicits._
+
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
-import scala.util.{Success, Failure}
+import scala.util.{Failure, Success}
 import scala.collection.JavaConverters._
 import sys.process._
-import org.json4s._
-import org.json4s.native.JsonMethods._
+import io.circe._
+import io.circe.parser._
 import com.softwaremill.sttp._
 import com.softwaremill.sttp.asynchttpclient.future.AsyncHttpClientFutureBackend
 
@@ -16,8 +17,8 @@ case class Ingredient(name: Option[String], unit: Option[String], qty: Option[St
 
 object Main extends App {
 
-  implicit val sttpBackend = AsyncHttpClientFutureBackend()
-  implicit val formats = DefaultFormats
+  implicit val sttpBackend: SttpBackend[Future, Nothing] = AsyncHttpClientFutureBackend()
+  implicit val decodeIngredient: Decoder[Ingredient] = Decoder.forProduct3("name", "unit", "qty")(Ingredient.apply)
 
   def stringify(ul: Element): String = ul
     .getElementsByTag("li")
@@ -32,8 +33,9 @@ object Main extends App {
     Seq("echo", s) #| parserFile #| converterFile !! // wrap this in IO monad or something
   }
 
-  def format(s: String): List[Ingredient] =
-    parse(s).extract[List[Ingredient]]
+  def format(s: String): List[Ingredient] = parse(s)
+    .getOrElse(Json.Null)
+    .as[List[Ingredient]] match { case Right(x) => x }
 
   def isIngredientList(l: List[Ingredient]): Boolean =
     if (l.isEmpty) false
@@ -42,22 +44,28 @@ object Main extends App {
       case _ => false
     } / l.length.toFloat >= .75 // some arbitrary number
 
-  def makeRequest(i: Ingredient): Future[Response[String]] = sttp
+  def makeRequest(i: Ingredient): Future[Response[String]] = sttp // eventually use word2vec for this
     .get(uri"https://api.edamam.com/api/food-database/parser?ingr=${i.name}&app_id=$appID&app_key=$appKey")
     .send()
 
-  def validateIngredient(r: Response[String]): Boolean =
-    parse(r.unsafeBody) \ "parsed" match { case JArray(l) => l.isEmpty }
+  def validateIngredient(r: Response[String]): Boolean = parse(r.unsafeBody)
+    .getOrElse(Json.Null)
+    .hcursor
+    .get[List[String]]("parsed") match {
+      case Right(x) => x.isEmpty
+      case Left(_) => false
+    }
 
-  def suspectList(e: Element): Boolean = {
+  def suspectList(e: Element): Boolean =
     if (e.children.size < 3) false
     else e.children.asScala.toList
       .map { child => (child.tagName, child.className) }
       .groupBy(identity).mapValues(_.size).values
-      .max >= e.children.size / 2
-  }
+      .max >= e.children.size / 2.toFloat
 
-  val url = "https://www.yummly.com/#recipe/Garlic-Parmesan-Kale-Pasta-Meal-Prep-2285925"
+  // perform suspectList on ALL nodes
+
+  val url = "http://allrecipes.com/recipe/9027/kung-pao-chicken/"
   val doc = Jsoup.connect(url).timeout(10000).get()
 
   // begin hard coding stuff to remove

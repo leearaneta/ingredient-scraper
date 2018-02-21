@@ -1,2 +1,6 @@
+[0m[[0m[33mwarn[0m] [0m[0m/Users/lee/Development/playingWithCats/src/main/scala/Main.scala:38:8: match may not be exhaustive.[0m
+[0m[[0m[33mwarn[0m] [0m[0mIt would fail on the following input: Left(_)[0m
+[0m[[0m[33mwarn[0m] [0m[0m    .as[List[Ingredient]] match { case Right(x) => x }[0m
+[0m[[0m[33mwarn[0m] [0m[0m       ^[0m
 [0m[[0m[33mwarn[0m] [0m[0mthere was one feature warning; re-run with -feature for details[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
