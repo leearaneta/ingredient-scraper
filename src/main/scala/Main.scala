@@ -7,7 +7,9 @@ import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.util.{Failure, Success}
 import scala.collection.JavaConverters._
-import sys.process._
+
+import com.googlecode.jsonrpc4j.JsonRpcHttpClient
+
 import io.circe._
 import io.circe.parser._
 import com.softwaremill.sttp._
@@ -26,12 +28,13 @@ object Main extends App {
     .map(_.text)
     .fold("") { _ + "\n" + _ }
 
-  def standardize(s: String): String = {
-    val path = "python src/main/ingredient-phrase-tagger/bin/" // put this in separate docker container
-    val parserFile = path + "parse-ingredients.py"
-    val converterFile = path + "convert-to-json.py"
-    Seq("echo", s) #| parserFile #| converterFile !! // wrap this in IO monad or something
-  }
+  def standardize(s: String): List[Ingredient] = {
+//    val path = "python src/main/ingredient-phrase-tagger/bin/" // put this in separate docker container
+//    val parserFile = path + "parse-ingredients.py"
+//    val converterFile = path + "convert-to-json.py"
+//    Seq("echo", s) #| parserFile #| converterFile !! // wrap this in IO monad or something
+    new JsonRpcHttpClient(new java.net.URL("http://example.com/UserService.json"))
+      .invoke("parse_ingredients", s, classOf[List[Ingredient]])
 
   def format(s: String): List[Ingredient] = parse(s)
     .getOrElse(Json.Null)
@@ -56,15 +59,6 @@ object Main extends App {
       case Left(_) => false
     }
 
-  def suspectList(e: Element): Boolean =
-    if (e.children.size < 3) false
-    else e.children.asScala.toList
-      .map { child => (child.tagName, child.className) }
-      .groupBy(identity).mapValues(_.size).values
-      .max >= e.children.size / 2.toFloat
-
-  // perform suspectList on ALL nodes
-
   val url = "http://allrecipes.com/recipe/9027/kung-pao-chicken/"
   val doc = Jsoup.connect(url).timeout(10000).get()
 
@@ -72,35 +66,39 @@ object Main extends App {
     doc.select("[ng-cloak]").remove()
   // end hard coding stuff to remove
 
-  def method1: Unit = {
-    val unorderedLists = doc.getElementsByTag("ul").asScala.toList
-    val (normalIngredients: List[Ingredient], sketchyIngredients: List[Ingredient]) = unorderedLists
-      .map(stringify) // take all raw text and separate with newlines
-      .map(standardize) // standardize using model
-      .map(format) // convert to ingredient case class
-      .filter(isIngredientList) // take out most things that aren't ingredients
-      .flatten // combine to one list of ingredients
-      .partition { // separate between sketchy and normal ingredients
-      case Ingredient(_, None, None) => false
-      case _ => true
-    }
-
-    val ingredients: Future[List[Ingredient]] = for {
-      validatedIngredients <- sketchyIngredients.traverse(makeRequest) map { _
-        .map(validateIngredient) // make api call to validate
-        .zip(sketchyIngredients)
-        .filter { case (bool, _) => bool } // filter out ones that are invalid
-        .map { case (_, value) => value }
-      }
-    } yield normalIngredients ::: validatedIngredients
-
-    ingredients onComplete {
-      case Success(r) => println(r)
-      case Failure(e) => println(e) // throw exception probably
-    }
+  val unorderedLists = doc.getElementsByTag("ul").asScala.toList
+  val (normalIngredients: List[Ingredient], sketchyIngredients: List[Ingredient]) = unorderedLists
+    .map(stringify) // take all raw text and separate with newlines
+    .map(standardize) // standardize using model
+    .map(format) // convert to ingredient case class
+    .filter(isIngredientList) // take out most things that aren't ingredients
+    .flatten // combine to one list of ingredients
+    .partition { // separate between sketchy and normal ingredients
+    case Ingredient(_, None, None) => false
+    case _ => true
   }
 
-  def method2: Unit = {
+  val ingredients: Future[List[Ingredient]] = for {
+    validatedIngredients <- sketchyIngredients.traverse(makeRequest) map { _
+      .map(validateIngredient) // make api call to validate
+      .zip(sketchyIngredients)
+      .filter { case (bool, _) => bool } // filter out ones that are invalid
+      .map { case (_, value) => value }
+    }
+  } yield normalIngredients ::: validatedIngredients
 
+  ingredients onComplete {
+    case Success(r) => println(r)
+    case Failure(e) => println(e) // throw exception probably
   }
+
 }
+
+//  def suspectList(e: Element): Boolean =
+//    if (e.children.size < 3) false
+//    else e.children.asScala.toList
+//      .map { child => (child.tagName, child.className) }
+//      .groupBy(identity).mapValues(_.size).values
+//      .max >= e.children.size / 2.toFloat
+
+// perform suspectList on ALL nodes

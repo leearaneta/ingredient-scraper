@@ -67,6 +67,28 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [compile->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile]
+[debug] sbt-chain: Checking cache for: dependency: com.fasterxml.jackson.core#jackson-databind;2.8.5 {compile=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime=[compile, runtime(*), master(compile), runtime, compile(*), master], test=[compile, runtime(*), master(compile), runtime, compile(*), master], compile-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], test-internal=[compile, runtime(*), master(compile), runtime, compile(*), master]}
+[debug] sbt-chain: module revision found in cache: com.fasterxml.jackson.core#jackson-databind;2.8.5
+[debug] 	found com.fasterxml.jackson.core#jackson-databind;2.8.5 in sbt-chain
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile]
+[debug] sbt-chain: Checking cache for: dependency: com.fasterxml.jackson.core#jackson-annotations;2.8.5 {compile=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime=[compile, runtime(*), master(compile), runtime, compile(*), master], test=[compile, runtime(*), master(compile), runtime, compile(*), master], compile-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], test-internal=[compile, runtime(*), master(compile), runtime, compile(*), master]}
+[debug] sbt-chain: module revision found in cache: com.fasterxml.jackson.core#jackson-annotations;2.8.5
+[debug] 	found com.fasterxml.jackson.core#jackson-annotations;2.8.5 in sbt-chain
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [compile->compile]
 [debug] sbt-chain: Checking cache for: dependency: io.netty#netty-handler;4.0.54.Final {compile=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime=[compile, runtime(*), master(compile), runtime, compile(*), master], test=[compile, runtime(*), master(compile), runtime, compile(*), master], compile-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], test-internal=[compile, runtime(*), master(compile), runtime, compile(*), master]}
 [debug] sbt-chain: module revision found in cache: io.netty#netty-handler;4.0.54.Final
@@ -339,6 +361,32 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [compile->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [compile->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->default]
+[debug] sbt-chain: Checking cache for: dependency: com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 {compile=[default, compile, runtime, default(compile), master], runtime=[default, compile, runtime, default(compile), master], test=[default, compile, runtime, default(compile), master], compile-internal=[default, compile, runtime, default(compile), master], runtime-internal=[default, compile, runtime, default(compile), master], test-internal=[default, compile, runtime, default(compile), master]}
+[debug] sbt-chain: module revision found in cache: com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3
+[debug] 	found com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 in sbt-chain
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->default(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile]
+[debug] sbt-chain: Checking cache for: dependency: com.fasterxml.jackson.core#jackson-core;2.8.5 {compile=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime=[compile, runtime(*), master(compile), runtime, compile(*), master], test=[compile, runtime(*), master(compile), runtime, compile(*), master], compile-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], test-internal=[compile, runtime(*), master(compile), runtime, compile(*), master]}
+[debug] sbt-chain: module revision found in cache: com.fasterxml.jackson.core#jackson-core;2.8.5
+[debug] 	found com.fasterxml.jackson.core#jackson-core;2.8.5 in sbt-chain
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [compile->compile]
 [debug] sbt-chain: Checking cache for: dependency: org.typelevel#machinist_2.12;0.6.2 {compile=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime=[compile, runtime(*), master(compile), runtime, compile(*), master], test=[compile, runtime(*), master(compile), runtime, compile(*), master], compile-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], test-internal=[compile, runtime(*), master(compile), runtime, compile(*), master]}
 [debug] sbt-chain: module revision found in cache: org.typelevel#machinist_2.12;0.6.2
@@ -377,6 +425,17 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile]
+[debug] sbt-chain: Checking cache for: dependency: net.iharder#base64;2.3.9 {compile=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime=[compile, runtime(*), master(compile), runtime, compile(*), master], test=[compile, runtime(*), master(compile), runtime, compile(*), master], compile-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], test-internal=[compile, runtime(*), master(compile), runtime, compile(*), master]}
+[debug] sbt-chain: module revision found in cache: net.iharder#base64;2.3.9
+[debug] 	found net.iharder#base64;2.3.9 in sbt-chain
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [compile->default]
 [debug] sbt-chain: Checking cache for: dependency: io.circe#circe-parser_2.12;0.9.1 {compile=[default, compile, runtime, default(compile), master], runtime=[default, compile, runtime, default(compile), master], test=[default, compile, runtime, default(compile), master], compile-internal=[default, compile, runtime, default(compile), master], runtime-internal=[default, compile, runtime, default(compile), master], test-internal=[default, compile, runtime, default(compile), master]}
 [debug] sbt-chain: module revision found in cache: io.circe#circe-parser_2.12;0.9.1
@@ -478,6 +537,22 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [compile->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [compile->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [compile->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [compile->compile]
@@ -678,6 +753,26 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [compile->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [compile->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->default]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->default(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [compile->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [compile->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [compile->compile]
@@ -706,6 +801,14 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [compile->default]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [compile->runtime]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [compile->compile]
@@ -791,6 +894,22 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [runtime->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [runtime->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [runtime->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [runtime->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [runtime->compile]
@@ -991,6 +1110,26 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [runtime->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [runtime->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->default]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->default(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [runtime->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [runtime->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [runtime->compile]
@@ -1019,6 +1158,14 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [runtime->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [runtime->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [runtime->default]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [runtime->runtime]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [runtime->compile]
@@ -1108,6 +1255,22 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [compile->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [compile->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [compile->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [compile->compile]
@@ -1308,6 +1471,26 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [compile->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [compile->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->default]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->default(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [compile->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [compile->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [compile->compile]
@@ -1336,6 +1519,14 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [compile->default]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [compile->runtime]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [compile->compile]
@@ -1421,6 +1612,22 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [runtime->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [runtime->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [runtime->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [runtime->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [runtime->compile]
@@ -1621,6 +1828,26 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [runtime->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [runtime->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->default]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->default(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [runtime->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [runtime->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [runtime->compile]
@@ -1649,6 +1876,14 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [runtime->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [runtime->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [runtime->default]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [runtime->runtime]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [runtime->compile]
@@ -1734,6 +1969,22 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [test->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [test->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [test->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [test->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [test->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [test->compile]
@@ -1934,6 +2185,26 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [test->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [test->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [test->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->default]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->default(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [test->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [test->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [test->compile]
@@ -1962,6 +2233,14 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [test->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [test->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [test->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [test->default]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [test->runtime]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [test->compile]
@@ -2054,6 +2333,22 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [compile->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [compile->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [compile->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [compile->compile]
@@ -2254,6 +2549,26 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [compile->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [compile->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->default]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->default(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [compile->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [compile->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [compile->compile]
@@ -2282,6 +2597,14 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [compile->default]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [compile->runtime]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [compile->compile]
@@ -2369,6 +2692,22 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [compile-internal->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [compile-internal->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [compile-internal->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile-internal->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile-internal->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile-internal->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile-internal->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile-internal->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile-internal->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile-internal->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile-internal->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile-internal->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile-internal->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [compile-internal->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [compile-internal->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [compile-internal->compile]
@@ -2569,6 +2908,26 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [compile-internal->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [compile-internal->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [compile-internal->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile-internal->default]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile-internal->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile-internal->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile-internal->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile-internal->default(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile-internal->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile-internal->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile-internal->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile-internal->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile-internal->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile-internal->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile-internal->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile-internal->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [compile-internal->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [compile-internal->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [compile-internal->compile]
@@ -2597,6 +2956,14 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile-internal->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile-internal->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile-internal->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile-internal->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile-internal->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile-internal->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile-internal->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile-internal->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [compile-internal->default]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [compile-internal->runtime]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [compile-internal->compile]
@@ -2686,6 +3053,22 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [compile->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [compile->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [compile->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [compile->compile]
@@ -2886,6 +3269,26 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [compile->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [compile->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->default]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->default(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [compile->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [compile->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [compile->compile]
@@ -2914,6 +3317,14 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [compile->default]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [compile->runtime]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [compile->compile]
@@ -2999,6 +3410,22 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [runtime->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [runtime->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [runtime->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [runtime->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [runtime->compile]
@@ -3199,6 +3626,26 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [runtime->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [runtime->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->default]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->default(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [runtime->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [runtime->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [runtime->compile]
@@ -3227,6 +3674,14 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [runtime->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [runtime->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [runtime->default]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [runtime->runtime]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [runtime->compile]
@@ -3313,6 +3768,22 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [runtime-internal->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [runtime-internal->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [runtime-internal->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime-internal->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime-internal->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime-internal->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime-internal->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime-internal->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime-internal->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime-internal->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime-internal->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime-internal->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime-internal->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [runtime-internal->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [runtime-internal->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [runtime-internal->compile]
@@ -3513,6 +3984,26 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [runtime-internal->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [runtime-internal->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [runtime-internal->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime-internal->default]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime-internal->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime-internal->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime-internal->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime-internal->default(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime-internal->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime-internal->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime-internal->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime-internal->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime-internal->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime-internal->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime-internal->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime-internal->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [runtime-internal->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [runtime-internal->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [runtime-internal->compile]
@@ -3541,6 +4032,14 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [runtime-internal->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [runtime-internal->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [runtime-internal->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime-internal->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime-internal->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime-internal->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime-internal->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime-internal->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [runtime-internal->default]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [runtime-internal->runtime]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [runtime-internal->compile]
@@ -3631,6 +4130,22 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [compile->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [compile->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [compile->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [compile->compile]
@@ -3831,6 +4346,26 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [compile->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [compile->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->default]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->default(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [compile->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [compile->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [compile->compile]
@@ -3859,6 +4394,14 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [compile->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [compile->default]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [compile->runtime]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [compile->compile]
@@ -3944,6 +4487,22 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [runtime->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [runtime->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [runtime->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [runtime->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [runtime->compile]
@@ -4144,6 +4703,26 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [runtime->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [runtime->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->default]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->default(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [runtime->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [runtime->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [runtime->compile]
@@ -4172,6 +4751,14 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [runtime->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [runtime->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [runtime->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [runtime->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [runtime->default]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [runtime->runtime]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [runtime->compile]
@@ -4257,6 +4844,22 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [test->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [test->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [test->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [test->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [test->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [test->compile]
@@ -4457,6 +5060,26 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [test->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [test->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [test->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->default]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->default(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [test->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [test->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [test->compile]
@@ -4485,6 +5108,14 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [test->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [test->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [test->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [test->default]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [test->runtime]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [test->compile]
@@ -4572,6 +5203,22 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [test-internal->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [test-internal->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-library;2.12.4 [test-internal->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test-internal->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test-internal->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test-internal->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test-internal->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-databind;2.8.5 [test-internal->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test-internal->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test-internal->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test-internal->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test-internal->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [test-internal->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [test-internal->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [test-internal->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-handler;4.0.54.Final [test-internal->compile]
@@ -4772,6 +5419,26 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [test-internal->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [test-internal->compile(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.netty#netty-codec;4.0.54.Final [test-internal->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test-internal->default]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test-internal->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test-internal->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test-internal->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test-internal->default(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test-internal->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test-internal->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [test-internal->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test-internal->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test-internal->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test-internal->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test-internal->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->com.fasterxml.jackson.core#jackson-core;2.8.5 [test-internal->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [test-internal->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [test-internal->runtime(*)]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.typelevel#machinist_2.12;0.6.2 [test-internal->compile]
@@ -4800,6 +5467,14 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [test-internal->compile]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [test-internal->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [test-internal->master]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test-internal->runtime(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test-internal->master(compile)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test-internal->runtime]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test-internal->compile]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test-internal->compile(*)]
+[debug] == resolving dependencies default#playingwithcats$sources;0.1->net.iharder#base64;2.3.9 [test-internal->master]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [test-internal->default]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [test-internal->runtime]
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->io.circe#circe-parser_2.12;0.9.1 [test-internal->compile]
@@ -4897,103 +5572,78 @@
 [debug] == resolving dependencies default#playingwithcats$sources;0.1->org.scala-lang#scala-compiler;2.12.4 [scala-tool->master]
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
-[debug] 		tried /Users/lee/.ivy2/local/io.circe/circe-jawn_2.12/0.9.1/srcs/circe-jawn_2.12-sources.jar
-[debug] 	[NOT REQUIRED] org.asynchttpclient#async-http-client;2.0.38!async-http-client.jar(src)
-[debug] 	[NOT REQUIRED] com.softwaremill.sttp#core_2.12;1.1.4!core_2.12.jar(src)
-[debug] 		tried https://repo1.maven.org/maven2/io/circe/circe-jawn_2.12/0.9.1/circe-jawn_2.12-0.9.1-sources.jar
-[debug] 		tried /Users/lee/.ivy2/local/org.typelevel/cats-kernel_2.12/1.0.1/srcs/cats-kernel_2.12-sources.jar
-[debug] 		tried /Users/lee/.ivy2/local/org.typelevel/cats-macros_2.12/1.0.1/srcs/cats-macros_2.12-sources.jar
-[debug] 		tried /Users/lee/.ivy2/local/io.circe/circe-numbers_2.12/0.9.1/srcs/circe-numbers_2.12-sources.jar
-[debug] 	[NOT REQUIRED] com.softwaremill.sttp#async-http-client-backend_2.12;1.1.4!async-http-client-backend_2.12.jar(src)
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.12/1.0.1/cats-kernel_2.12-1.0.1-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.12/1.0.1/cats-macros_2.12-1.0.1-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/io/circe/circe-numbers_2.12/0.9.1/circe-numbers_2.12-0.9.1-sources.jar
-[debug] 	[NOT REQUIRED] io.netty#netty-transport;4.0.54.Final!netty-transport.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.netty#netty-reactive-streams;1.0.8!netty-reactive-streams.jar(src)
-[debug] 	[NOT REQUIRED] io.netty#netty-handler;4.0.54.Final!netty-handler.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.4!scala-reflect.jar(src)
-[debug] 		tried /Users/lee/.ivy2/local/io.circe/circe-core_2.12/0.9.1/srcs/circe-core_2.12-sources.jar
-[debug] 	[NOT REQUIRED] org.asynchttpclient#netty-codec-dns;2.0.38!netty-codec-dns.jar(src)
-[debug] 		tried /Users/lee/.ivy2/local/org.typelevel/cats-core_2.12/1.0.1/srcs/cats-core_2.12-sources.jar
-[debug] 	[NOT REQUIRED] org.asynchttpclient#netty-resolver;2.0.38!netty-resolver.jar(src)
-[debug] 		tried https://repo1.maven.org/maven2/io/circe/circe-core_2.12/0.9.1/circe-core_2.12-0.9.1-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/typelevel/cats-core_2.12/1.0.1/cats-core_2.12-1.0.1-sources.jar
-[debug] 	[NOT REQUIRED] io.netty#netty-codec-http;4.0.54.Final!netty-codec-http.jar(src)
-[debug] 	[NOT REQUIRED] org.typelevel#macro-compat_2.12;1.1.1!macro-compat_2.12.jar(src)
-[debug] 		tried /Users/lee/.ivy2/local/com.chuusai/shapeless_2.12/2.3.3/srcs/shapeless_2.12-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3-sources.jar
-[debug] 	[NOT REQUIRED] io.netty#netty-codec;4.0.54.Final!netty-codec.jar(src)
-[debug] 	[NOT REQUIRED] org.typelevel#machinist_2.12;0.6.2!machinist_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.jsoup#jsoup;1.8.3!jsoup.jar(src)
-[debug] 	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.25!slf4j-api.jar(src)
-[debug] 		tried /Users/lee/.ivy2/local/io.circe/circe-generic_2.12/0.9.1/srcs/circe-generic_2.12-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/io/circe/circe-generic_2.12/0.9.1/circe-generic_2.12-0.9.1-sources.jar
-[info] downloading https://repo1.maven.org/maven2/io/circe/circe-jawn_2.12/0.9.1/circe-jawn_2.12-0.9.1-sources.jar ...
-[info] downloading https://repo1.maven.org/maven2/io/circe/circe-numbers_2.12/0.9.1/circe-numbers_2.12-0.9.1-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/io/circe/circe-numbers_2.12/0.9.1/circe-numbers_2.12-0.9.1-sources.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/io/circe/circe-jawn_2.12/0.9.1/circe-jawn_2.12-0.9.1-sources.jar
-[info] downloading https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.12/1.0.1/cats-macros_2.12-1.0.1-sources.jar ...
-[info] downloading https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.12/1.0.1/cats-kernel_2.12-1.0.1-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.12/1.0.1/cats-macros_2.12-1.0.1-sources.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.12/1.0.1/cats-kernel_2.12-1.0.1-sources.jar
-[info] downloading https://repo1.maven.org/maven2/io/circe/circe-core_2.12/0.9.1/circe-core_2.12-0.9.1-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/io/circe/circe-core_2.12/0.9.1/circe-core_2.12-0.9.1-sources.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/io/circe/circe-jawn_2.12/0.9.1/circe-jawn_2.12-0.9.1-sources.jar.sha1
-[debug] 	public: downloading https://repo1.maven.org/maven2/io/circe/circe-numbers_2.12/0.9.1/circe-numbers_2.12-0.9.1-sources.jar.sha1
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.12/1.0.1/cats-macros_2.12-1.0.1-sources.jar.sha1
-[debug] 	public: downloading https://repo1.maven.org/maven2/io/circe/circe-core_2.12/0.9.1/circe-core_2.12-0.9.1-sources.jar.sha1
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.12/1.0.1/cats-kernel_2.12-1.0.1-sources.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/io/circe/circe-jawn_2.12/0.9.1/circe-jawn_2.12-0.9.1-sources.jar
-[info] 	[SUCCESSFUL ] io.circe#circe-jawn_2.12;0.9.1!circe-jawn_2.12.jar(src) (98ms)
-[debug] 	[NOT REQUIRED] com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4!async-http-client-backend-future_2.12.jar(src)
-[debug] 		tried /Users/lee/.ivy2/local/io.circe/circe-parser_2.12/0.9.1/srcs/circe-parser_2.12-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/io/circe/circe-parser_2.12/0.9.1/circe-parser_2.12-0.9.1-sources.jar
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/typelevel/cats-macros_2.12/1.0.1/cats-macros_2.12-1.0.1-sources.jar
-[debug] sha1 OK for https://repo1.maven.org/maven2/io/circe/circe-numbers_2.12/0.9.1/circe-numbers_2.12-0.9.1-sources.jar
-[info] 	[SUCCESSFUL ] org.typelevel#cats-macros_2.12;1.0.1!cats-macros_2.12.jar(src) (104ms)
-[info] 	[SUCCESSFUL ] io.circe#circe-numbers_2.12;0.9.1!circe-numbers_2.12.jar(src) (104ms)
-[debug] 	[NOT REQUIRED] org.asynchttpclient#netty-resolver-dns;2.0.38!netty-resolver-dns.jar(src)
-[debug] 	[NOT REQUIRED] org.reactivestreams#reactive-streams;1.0.0!reactive-streams.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(src)
-[debug] 	[NOT REQUIRED] jline#jline;2.14.5!jline.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.4!scala-compiler.jar(src)
-[debug] 	[NOT REQUIRED] io.netty#netty-transport-native-epoll;4.0.54.Final!netty-transport-native-epoll.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.4!scala-library.jar(src)
-[debug] 	[NOT REQUIRED] io.netty#netty-common;4.0.54.Final!netty-common.jar(src)
-[info] downloading https://repo1.maven.org/maven2/io/circe/circe-parser_2.12/0.9.1/circe-parser_2.12-0.9.1-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/io/circe/circe-parser_2.12/0.9.1/circe-parser_2.12-0.9.1-sources.jar
-[debug] sha1 OK for https://repo1.maven.org/maven2/io/circe/circe-core_2.12/0.9.1/circe-core_2.12-0.9.1-sources.jar
-[info] 	[SUCCESSFUL ] io.circe#circe-core_2.12;0.9.1!circe-core_2.12.jar(src) (115ms)
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.12/1.0.1/cats-kernel_2.12-1.0.1-sources.jar
-[info] 	[SUCCESSFUL ] org.typelevel#cats-kernel_2.12;1.0.1!cats-kernel_2.12.jar(src) (125ms)
-[info] downloading https://repo1.maven.org/maven2/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3-sources.jar
-[info] downloading https://repo1.maven.org/maven2/io/circe/circe-generic_2.12/0.9.1/circe-generic_2.12-0.9.1-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/io/circe/circe-generic_2.12/0.9.1/circe-generic_2.12-0.9.1-sources.jar
-[info] downloading https://repo1.maven.org/maven2/org/typelevel/cats-core_2.12/1.0.1/cats-core_2.12-1.0.1-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-core_2.12/1.0.1/cats-core_2.12-1.0.1-sources.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/io/circe/circe-parser_2.12/0.9.1/circe-parser_2.12-0.9.1-sources.jar.sha1
-[debug] 	public: downloading https://repo1.maven.org/maven2/io/circe/circe-generic_2.12/0.9.1/circe-generic_2.12-0.9.1-sources.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/io/circe/circe-parser_2.12/0.9.1/circe-parser_2.12-0.9.1-sources.jar
-[info] 	[SUCCESSFUL ] io.circe#circe-parser_2.12;0.9.1!circe-parser_2.12.jar(src) (117ms)
-[debug] 		tried /Users/lee/.ivy2/local/org.spire-math/jawn-parser_2.12/0.11.0/srcs/jawn-parser_2.12-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/spire-math/jawn-parser_2.12/0.11.0/jawn-parser_2.12-0.11.0-sources.jar
-[debug] sha1 OK for https://repo1.maven.org/maven2/io/circe/circe-generic_2.12/0.9.1/circe-generic_2.12-0.9.1-sources.jar
-[info] 	[SUCCESSFUL ] io.circe#circe-generic_2.12;0.9.1!circe-generic_2.12.jar(src) (226ms)
-[info] downloading https://repo1.maven.org/maven2/org/spire-math/jawn-parser_2.12/0.11.0/jawn-parser_2.12-0.11.0-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/spire-math/jawn-parser_2.12/0.11.0/jawn-parser_2.12-0.11.0-sources.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/typelevel/cats-core_2.12/1.0.1/cats-core_2.12-1.0.1-sources.jar.sha1
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3-sources.jar.sha1
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/spire-math/jawn-parser_2.12/0.11.0/jawn-parser_2.12-0.11.0-sources.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/typelevel/cats-core_2.12/1.0.1/cats-core_2.12-1.0.1-sources.jar
-[info] 	[SUCCESSFUL ] org.typelevel#cats-core_2.12;1.0.1!cats-core_2.12.jar(src) (285ms)
-[debug] 	[NOT REQUIRED] io.netty#netty-buffer;4.0.54.Final!netty-buffer.jar(src)
-[debug] sha1 OK for https://repo1.maven.org/maven2/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3-sources.jar
-[info] 	[SUCCESSFUL ] com.chuusai#shapeless_2.12;2.3.3!shapeless_2.12.jar(src) (289ms)
 [debug] 	[NOT REQUIRED] org.asynchttpclient#async-http-client-netty-utils;2.0.38!async-http-client-netty-utils.jar(src)
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/spire-math/jawn-parser_2.12/0.11.0/jawn-parser_2.12-0.11.0-sources.jar
-[info] 	[SUCCESSFUL ] org.spire-math#jawn-parser_2.12;0.11.0!jawn-parser_2.12.jar(src) (102ms)
-[debug] :: resolution report :: resolve 519ms :: artifacts dl 331ms
+[debug] 	[NOT REQUIRED] io.netty#netty-transport-native-epoll;4.0.54.Final!netty-transport-native-epoll.jar(src)
+[debug] 	[NOT REQUIRED] org.typelevel#machinist_2.12;0.6.2!machinist_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.typelevel#cats-kernel_2.12;1.0.1!cats-kernel_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.4!scala-library.jar(src)
+[debug] 	[NOT REQUIRED] io.circe#circe-jawn_2.12;0.9.1!circe-jawn_2.12.jar(src)
+[debug] 	[NOT REQUIRED] io.netty#netty-common;4.0.54.Final!netty-common.jar(src)
+[debug] 		tried /Users/lee/.ivy2/local/com.fasterxml.jackson.core/jackson-annotations/2.8.5/srcs/jackson-annotations-sources.jar
+[debug] 		tried /Users/lee/.ivy2/local/com.fasterxml.jackson.core/jackson-databind/2.8.5/srcs/jackson-databind-sources.jar
+[debug] 	[NOT REQUIRED] com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4!async-http-client-backend-future_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.jsoup#jsoup;1.8.3!jsoup.jar(src)
+[debug] 	[NOT REQUIRED] org.spire-math#jawn-parser_2.12;0.11.0!jawn-parser_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.25!slf4j-api.jar(src)
+[debug] 		tried /Users/lee/.ivy2/local/net.iharder/base64/2.3.9/srcs/base64-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.8.5/jackson-annotations-2.8.5-sources.jar
+[debug] 	[NOT REQUIRED] org.asynchttpclient#netty-resolver-dns;2.0.38!netty-resolver-dns.jar(src)
+[debug] 	[NOT REQUIRED] com.softwaremill.sttp#core_2.12;1.1.4!core_2.12.jar(src)
+[debug] 		tried https://repo1.maven.org/maven2/net/iharder/base64/2.3.9/base64-2.3.9-sources.jar
+[debug] 	[NOT REQUIRED] org.asynchttpclient#netty-resolver;2.0.38!netty-resolver.jar(src)
+[debug] 	[NOT REQUIRED] org.reactivestreams#reactive-streams;1.0.0!reactive-streams.jar(src)
+[debug] 	[NOT REQUIRED] com.softwaremill.sttp#async-http-client-backend_2.12;1.1.4!async-http-client-backend_2.12.jar(src)
+[debug] 		tried https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.8.5/jackson-databind-2.8.5-sources.jar
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.typelevel#macro-compat_2.12;1.1.1!macro-compat_2.12.jar(src)
+[debug] 	[NOT REQUIRED] io.netty#netty-transport;4.0.54.Final!netty-transport.jar(src)
+[debug] 	[NOT REQUIRED] jline#jline;2.14.5!jline.jar(src)
+[debug] 	[NOT REQUIRED] io.netty#netty-codec;4.0.54.Final!netty-codec.jar(src)
+[debug] 	[NOT REQUIRED] org.typelevel#cats-core_2.12;1.0.1!cats-core_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.4!scala-compiler.jar(src)
+[debug] 		tried /Users/lee/.ivy2/local/com.github.briandilley.jsonrpc4j/jsonrpc4j/1.5.3/srcs/jsonrpc4j-sources.jar
+[debug] 	[NOT REQUIRED] io.netty#netty-buffer;4.0.54.Final!netty-buffer.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.netty#netty-reactive-streams;1.0.8!netty-reactive-streams.jar(src)
+[debug] 	[NOT REQUIRED] org.asynchttpclient#async-http-client;2.0.38!async-http-client.jar(src)
+[debug] 		tried https://repo1.maven.org/maven2/com/github/briandilley/jsonrpc4j/jsonrpc4j/1.5.3/jsonrpc4j-1.5.3-sources.jar
+[debug] 	[NOT REQUIRED] io.circe#circe-numbers_2.12;0.9.1!circe-numbers_2.12.jar(src)
+[debug] 	[NOT REQUIRED] io.circe#circe-core_2.12;0.9.1!circe-core_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.4!scala-reflect.jar(src)
+[debug] 	[NOT REQUIRED] org.typelevel#cats-macros_2.12;1.0.1!cats-macros_2.12.jar(src)
+[debug] 	[NOT REQUIRED] io.netty#netty-handler;4.0.54.Final!netty-handler.jar(src)
+[debug] 	[NOT REQUIRED] org.asynchttpclient#netty-codec-dns;2.0.38!netty-codec-dns.jar(src)
+[debug] 	[NOT REQUIRED] io.circe#circe-generic_2.12;0.9.1!circe-generic_2.12.jar(src)
+[debug] 	[NOT REQUIRED] io.netty#netty-codec-http;4.0.54.Final!netty-codec-http.jar(src)
+[debug] 	[NOT REQUIRED] com.chuusai#shapeless_2.12;2.3.3!shapeless_2.12.jar(src)
+[info] downloading https://repo1.maven.org/maven2/net/iharder/base64/2.3.9/base64-2.3.9-sources.jar ...
+[info] downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.8.5/jackson-annotations-2.8.5-sources.jar ...
+[info] downloading https://repo1.maven.org/maven2/com/github/briandilley/jsonrpc4j/jsonrpc4j/1.5.3/jsonrpc4j-1.5.3-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.8.5/jackson-annotations-2.8.5-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/github/briandilley/jsonrpc4j/jsonrpc4j/1.5.3/jsonrpc4j-1.5.3-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/net/iharder/base64/2.3.9/base64-2.3.9-sources.jar
+[info] downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.8.5/jackson-databind-2.8.5-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.8.5/jackson-databind-2.8.5-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/net/iharder/base64/2.3.9/base64-2.3.9-sources.jar.sha1
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.8.5/jackson-annotations-2.8.5-sources.jar.sha1
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/github/briandilley/jsonrpc4j/jsonrpc4j/1.5.3/jsonrpc4j-1.5.3-sources.jar.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/net/iharder/base64/2.3.9/base64-2.3.9-sources.jar
+[info] 	[SUCCESSFUL ] net.iharder#base64;2.3.9!base64.jar(src) (824ms)
+[debug] 	[NOT REQUIRED] io.circe#circe-parser_2.12;0.9.1!circe-parser_2.12.jar(src)
+[debug] sha1 OK for https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.8.5/jackson-annotations-2.8.5-sources.jar
+[info] 	[SUCCESSFUL ] com.fasterxml.jackson.core#jackson-annotations;2.8.5!jackson-annotations.jar(src) (832ms)
+[debug] sha1 OK for https://repo1.maven.org/maven2/com/github/briandilley/jsonrpc4j/jsonrpc4j/1.5.3/jsonrpc4j-1.5.3-sources.jar
+[info] 	[SUCCESSFUL ] com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3!jsonrpc4j.jar(src) (892ms)
+[debug] 		tried /Users/lee/.ivy2/local/com.fasterxml.jackson.core/jackson-core/2.8.5/srcs/jackson-core-sources.jar
+[debug] 		tried https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.8.5/jackson-core-2.8.5-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.8.5/jackson-databind-2.8.5-sources.jar.sha1
+[info] downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.8.5/jackson-core-2.8.5-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.8.5/jackson-core-2.8.5-sources.jar
+[debug] sha1 OK for https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.8.5/jackson-databind-2.8.5-sources.jar
+[info] 	[SUCCESSFUL ] com.fasterxml.jackson.core#jackson-databind;2.8.5!jackson-databind.jar(src) (963ms)
+[debug] 	public: downloading https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.8.5/jackson-core-2.8.5-sources.jar.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.8.5/jackson-core-2.8.5-sources.jar
+[info] 	[SUCCESSFUL ] com.fasterxml.jackson.core#jackson-core;2.8.5!jackson-core.jar(src) (166ms)
+[debug] :: resolution report :: resolve 730ms :: artifacts dl 1080ms
 [debug] 	report for default#playingwithcats$sources;0.1 compile produced in /Users/lee/Development/playingWithCats/target/scala-2.12/resolution-cache/reports/default-playingwithcats$sources-compile.xml
 [debug] 	report for default#playingwithcats$sources;0.1 runtime produced in /Users/lee/Development/playingWithCats/target/scala-2.12/resolution-cache/reports/default-playingwithcats$sources-runtime.xml
 [debug] 	report for default#playingwithcats$sources;0.1 test produced in /Users/lee/Development/playingWithCats/target/scala-2.12/resolution-cache/reports/default-playingwithcats$sources-test.xml
@@ -5005,4 +5655,4 @@
 [debug] 	report for default#playingwithcats$sources;0.1 plugin produced in /Users/lee/Development/playingWithCats/target/scala-2.12/resolution-cache/reports/default-playingwithcats$sources-plugin.xml
 [debug] 	report for default#playingwithcats$sources;0.1 pom produced in /Users/lee/Development/playingWithCats/target/scala-2.12/resolution-cache/reports/default-playingwithcats$sources-pom.xml
 [debug] 	report for default#playingwithcats$sources;0.1 scala-tool produced in /Users/lee/Development/playingWithCats/target/scala-2.12/resolution-cache/reports/default-playingwithcats$sources-scala-tool.xml
-[debug] 	resolve done (519ms resolve - 331ms download)
+[debug] 	resolve done (730ms resolve - 1080ms download)

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: com.github.briandilley.jsonrpc4j:jsonrpc4j:1.5.3:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.github.briandilley.jsonrpc4j/jsonrpc4j/jars/jsonrpc4j-1.5.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.github.briandilley.jsonrpc4j/jsonrpc4j/srcs/jsonrpc4j-1.5.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

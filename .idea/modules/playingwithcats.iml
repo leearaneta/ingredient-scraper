@@ -22,18 +22,31 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="SBT: org.scala-lang:scala-library:2.12.4:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.typelevel:macro-compat_2.12:1.1.1:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.typelevel:cats-macros_2.12:1.0.1:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.typelevel:cats-kernel_2.12:1.0.1:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.typelevel:cats-core_2.12:1.0.1:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.spire-math:jawn-parser_2.12:0.11.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: io.circe:circe-parser_2.12:0.9.1:jar" level="project" />
-    <orderEntry type="library" name="SBT: io.circe:circe-numbers_2.12:0.9.1:jar" level="project" />
-    <orderEntry type="library" name="SBT: io.circe:circe-jawn_2.12:0.9.1:jar" level="project" />
-    <orderEntry type="library" name="SBT: io.circe:circe-generic_2.12:0.9.1:jar" level="project" />
-    <orderEntry type="library" name="SBT: io.circe:circe-core_2.12:0.9.1:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.chuusai:shapeless_2.12:2.3.3:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.softwaremill.sttp:async-http-client-backend-future_2.12:1.1.4:jar" level="project" />
+    <orderEntry type="library" name="SBT: net.iharder:base64:2.3.9:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.github.briandilley.jsonrpc4j:jsonrpc4j:1.5.3:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.fasterxml.jackson.core:jackson-databind:2.8.5:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.fasterxml.jackson.core:jackson-core:2.8.5:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.fasterxml.jackson.core:jackson-annotations:2.8.5:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.softwaremill.sttp:core_2.12:1.1.4:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.jsoup:jsoup:1.8.3:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.scala-lang:scala-reflect:2.12.4:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.typelevel:machinist_2.12:0.6.2:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.softwaremill.sttp:async-http-client-backend_2.12:1.1.4:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.netty:netty-reactive-streams:1.0.8:jar" level="project" />
+    <orderEntry type="library" name="SBT: io.netty:netty-buffer:4.0.54.Final:jar" level="project" />
+    <orderEntry type="library" name="SBT: io.netty:netty-codec:4.0.54.Final:jar" level="project" />
+    <orderEntry type="library" name="SBT: io.netty:netty-codec-http:4.0.54.Final:jar" level="project" />
+    <orderEntry type="library" name="SBT: io.netty:netty-common:4.0.54.Final:jar" level="project" />
+    <orderEntry type="library" name="SBT: io.netty:netty-handler:4.0.54.Final:jar" level="project" />
+    <orderEntry type="library" name="SBT: io.netty:netty-transport:4.0.54.Final:jar" level="project" />
+    <orderEntry type="library" name="SBT: io.netty:netty-transport-native-epoll:4.0.54.Final:linux-x86_64:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.asynchttpclient:async-http-client:2.0.38:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.asynchttpclient:async-http-client-netty-utils:2.0.38:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.asynchttpclient:netty-codec-dns:2.0.38:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.asynchttpclient:netty-resolver:2.0.38:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.asynchttpclient:netty-resolver-dns:2.0.38:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.reactivestreams:reactive-streams:1.0.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.slf4j:slf4j-api:1.7.25:jar" level="project" />
     <orderEntry type="module-library">
       <library name="SBT: unmanaged-sources-and-docs">
         <CLASSES />
@@ -43,25 +56,17 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="library" name="SBT: org.slf4j:slf4j-api:1.7.25:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.reactivestreams:reactive-streams:1.0.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.asynchttpclient:netty-resolver-dns:2.0.38:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.asynchttpclient:netty-resolver:2.0.38:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.asynchttpclient:netty-codec-dns:2.0.38:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.asynchttpclient:async-http-client-netty-utils:2.0.38:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.asynchttpclient:async-http-client:2.0.38:jar" level="project" />
-    <orderEntry type="library" name="SBT: io.netty:netty-transport-native-epoll:4.0.54.Final:linux-x86_64:jar" level="project" />
-    <orderEntry type="library" name="SBT: io.netty:netty-transport:4.0.54.Final:jar" level="project" />
-    <orderEntry type="library" name="SBT: io.netty:netty-handler:4.0.54.Final:jar" level="project" />
-    <orderEntry type="library" name="SBT: io.netty:netty-common:4.0.54.Final:jar" level="project" />
-    <orderEntry type="library" name="SBT: io.netty:netty-codec-http:4.0.54.Final:jar" level="project" />
-    <orderEntry type="library" name="SBT: io.netty:netty-codec:4.0.54.Final:jar" level="project" />
-    <orderEntry type="library" name="SBT: io.netty:netty-buffer:4.0.54.Final:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe.netty:netty-reactive-streams:1.0.8:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.softwaremill.sttp:async-http-client-backend_2.12:1.1.4:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.typelevel:machinist_2.12:0.6.2:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.scala-lang:scala-reflect:2.12.4:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.jsoup:jsoup:1.8.3:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.softwaremill.sttp:core_2.12:1.1.4:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.softwaremill.sttp:async-http-client-backend-future_2.12:1.1.4:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.chuusai:shapeless_2.12:2.3.3:jar" level="project" />
+    <orderEntry type="library" name="SBT: io.circe:circe-core_2.12:0.9.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: io.circe:circe-generic_2.12:0.9.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: io.circe:circe-jawn_2.12:0.9.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: io.circe:circe-numbers_2.12:0.9.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: io.circe:circe-parser_2.12:0.9.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.spire-math:jawn-parser_2.12:0.11.0:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.typelevel:cats-core_2.12:1.0.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.typelevel:cats-kernel_2.12:1.0.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.typelevel:cats-macros_2.12:1.0.1:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.typelevel:macro-compat_2.12:1.1.1:jar" level="project" />
   </component>
 </module>
