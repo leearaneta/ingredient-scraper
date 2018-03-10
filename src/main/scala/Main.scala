@@ -12,8 +12,11 @@ import com.googlecode.jsonrpc4j.JsonRpcHttpClient
 
 import io.circe._
 import io.circe.parser._
+import io.circe.syntax._
+
 import com.softwaremill.sttp._
 import com.softwaremill.sttp.asynchttpclient.future.AsyncHttpClientFutureBackend
+
 
 case class Ingredient(name: Option[String], unit: Option[String], qty: Option[String])
 
@@ -22,23 +25,16 @@ object Main extends App {
   implicit val sttpBackend: SttpBackend[Future, Nothing] = AsyncHttpClientFutureBackend()
   implicit val decodeIngredient: Decoder[Ingredient] = Decoder.forProduct3("name", "unit", "qty")(Ingredient.apply)
 
-  def stringify(ul: Element): String = ul
+  def stringify(ul: Element): List[String] = ul
     .getElementsByTag("li")
     .asScala.toList
     .map(_.text)
-    .fold("") { _ + "\n" + _ }
 
-  def standardize(s: String): List[Ingredient] = {
-//    val path = "python src/main/ingredient-phrase-tagger/bin/" // put this in separate docker container
-//    val parserFile = path + "parse-ingredients.py"
-//    val converterFile = path + "convert-to-json.py"
-//    Seq("echo", s) #| parserFile #| converterFile !! // wrap this in IO monad or something
-    new JsonRpcHttpClient(new java.net.URL("http://example.com/UserService.json"))
-      .invoke("parse_ingredients", s, classOf[List[Ingredient]])
-
-  def format(s: String): List[Ingredient] = parse(s)
-    .getOrElse(Json.Null)
-    .as[List[Ingredient]] match { case Right(x) => x }
+  def standardize(l: List[String]): List[Ingredient] =
+    decode[List[Ingredient]](
+      new JsonRpcHttpClient(new java.net.URL("http://localhost:4000/jsonrpc"))
+        .invoke("parse_ingredients", l.asJava, classOf[String])
+    ) match { case Right(x) => x }
 
   def isIngredientList(l: List[Ingredient]): Boolean =
     if (l.isEmpty) false
@@ -69,28 +65,27 @@ object Main extends App {
   val unorderedLists = doc.getElementsByTag("ul").asScala.toList
   val (normalIngredients: List[Ingredient], sketchyIngredients: List[Ingredient]) = unorderedLists
     .map(stringify) // take all raw text and separate with newlines
-    .map(standardize) // standardize using model
-    .map(format) // convert to ingredient case class
+    .map(standardize) // convert text to case class
     .filter(isIngredientList) // take out most things that aren't ingredients
     .flatten // combine to one list of ingredients
     .partition { // separate between sketchy and normal ingredients
-    case Ingredient(_, None, None) => false
-    case _ => true
-  }
-
-  val ingredients: Future[List[Ingredient]] = for {
-    validatedIngredients <- sketchyIngredients.traverse(makeRequest) map { _
-      .map(validateIngredient) // make api call to validate
-      .zip(sketchyIngredients)
-      .filter { case (bool, _) => bool } // filter out ones that are invalid
-      .map { case (_, value) => value }
+      case Ingredient(_, None, None) => false
+      case _ => true
     }
-  } yield normalIngredients ::: validatedIngredients
-
-  ingredients onComplete {
-    case Success(r) => println(r)
-    case Failure(e) => println(e) // throw exception probably
-  }
+//
+//  val ingredients: Future[List[Ingredient]] = for {
+//    validatedIngredients <- sketchyIngredients.traverse(makeRequest) map { _
+//      .map(validateIngredient) // make api call to validate
+//      .zip(sketchyIngredients)
+//      .filter { case (bool, _) => bool } // filter out ones that are invalid
+//      .map { case (_, value) => value }
+//    }
+//  } yield normalIngredients ::: validatedIngredients
+//
+//  ingredients onComplete {
+//    case Success(r) => println(r)
+//    case Failure(e) => println(e) // throw exception probably
+//  }
 
 }
 

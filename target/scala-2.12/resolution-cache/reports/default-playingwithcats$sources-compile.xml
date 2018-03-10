@@ -7,7 +7,7 @@
 		revision="0.1"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20180223002123"/>
+		date="20180309224202"/>
 	<dependencies>
 		<module organisation="io.circe" name="circe-parser_2.12">
 			<revision name="0.9.1" status="release" pubdate="20180118200211" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/circe/circe" extra-info.apiURL="https://circe.github.io/circe/api/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="34">
@@ -63,7 +63,7 @@
 				<metadata-artifact status="no" details="" size="5321" time="0" location="/Users/lee/.ivy2/cache/com.github.briandilley.jsonrpc4j/jsonrpc4j/ivy-1.5.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/github/briandilley/jsonrpc4j/jsonrpc4j/1.5.3/jsonrpc4j-1.5.3.pom"/>
 				<caller organisation="default" name="playingwithcats$sources" conf="compile" rev="1.5.3" rev-constraint-default="1.5.3" rev-constraint-dynamic="1.5.3" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="jsonrpc4j" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="81961" time="892" location="/Users/lee/.ivy2/cache/com.github.briandilley.jsonrpc4j/jsonrpc4j/srcs/jsonrpc4j-1.5.3-sources.jar">
+					<artifact name="jsonrpc4j" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="81961" time="0" location="/Users/lee/.ivy2/cache/com.github.briandilley.jsonrpc4j/jsonrpc4j/srcs/jsonrpc4j-1.5.3-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/github/briandilley/jsonrpc4j/jsonrpc4j/1.5.3/jsonrpc4j-1.5.3-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -75,7 +75,7 @@
 				<metadata-artifact status="no" details="" size="3108" time="0" location="/Users/lee/.ivy2/cache/net.iharder/base64/ivy-2.3.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/iharder/base64/2.3.9/base64-2.3.9.pom"/>
 				<caller organisation="default" name="playingwithcats$sources" conf="compile" rev="2.3.9" rev-constraint-default="2.3.9" rev-constraint-dynamic="2.3.9" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="base64" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="17727" time="824" location="/Users/lee/.ivy2/cache/net.iharder/base64/srcs/base64-2.3.9-sources.jar">
+					<artifact name="base64" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="17727" time="0" location="/Users/lee/.ivy2/cache/net.iharder/base64/srcs/base64-2.3.9-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/net/iharder/base64/2.3.9/base64-2.3.9-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -278,7 +278,7 @@
 				<metadata-artifact status="no" details="" size="6969" time="0" location="/Users/lee/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/ivy-2.8.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.8.5/jackson-annotations-2.8.5.pom"/>
 				<caller organisation="default" name="playingwithcats$sources" conf="compile" rev="2.8.5" rev-constraint-default="2.8.5" rev-constraint-dynamic="2.8.5" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="jackson-annotations" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="57660" time="832" location="/Users/lee/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/srcs/jackson-annotations-2.8.5-sources.jar">
+					<artifact name="jackson-annotations" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="57660" time="0" location="/Users/lee/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/srcs/jackson-annotations-2.8.5-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.8.5/jackson-annotations-2.8.5-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -290,7 +290,7 @@
 				<metadata-artifact status="no" details="" size="8156" time="0" location="/Users/lee/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/ivy-2.8.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.8.5/jackson-databind-2.8.5.pom"/>
 				<caller organisation="default" name="playingwithcats$sources" conf="compile" rev="2.8.5" rev-constraint-default="2.8.5" rev-constraint-dynamic="2.8.5" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="jackson-databind" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="919303" time="963" location="/Users/lee/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/srcs/jackson-databind-2.8.5-sources.jar">
+					<artifact name="jackson-databind" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="919303" time="0" location="/Users/lee/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/srcs/jackson-databind-2.8.5-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.8.5/jackson-databind-2.8.5-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -302,7 +302,7 @@
 				<metadata-artifact status="no" details="" size="7423" time="0" location="/Users/lee/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/ivy-2.8.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.8.5/jackson-core-2.8.5.pom"/>
 				<caller organisation="default" name="playingwithcats$sources" conf="compile" rev="2.8.5" rev-constraint-default="2.8.5" rev-constraint-dynamic="2.8.5" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="jackson-core" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="293681" time="166" location="/Users/lee/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/srcs/jackson-core-2.8.5-sources.jar">
+					<artifact name="jackson-core" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="293681" time="0" location="/Users/lee/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/srcs/jackson-core-2.8.5-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.8.5/jackson-core-2.8.5-sources.jar"/>
 					</artifact>
 				</artifacts>

@@ -22,11 +22,11 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="SBT: org.scala-lang:scala-library:2.12.4:jar" level="project" />
-    <orderEntry type="library" name="SBT: net.iharder:base64:2.3.9:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.github.briandilley.jsonrpc4j:jsonrpc4j:1.5.3:jar" level="project" />
     <orderEntry type="library" name="SBT: com.fasterxml.jackson.core:jackson-databind:2.8.5:jar" level="project" />
     <orderEntry type="library" name="SBT: com.fasterxml.jackson.core:jackson-core:2.8.5:jar" level="project" />
     <orderEntry type="library" name="SBT: com.fasterxml.jackson.core:jackson-annotations:2.8.5:jar" level="project" />
+    <orderEntry type="library" name="SBT: net.iharder:base64:2.3.9:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.github.briandilley.jsonrpc4j:jsonrpc4j:1.5.3:jar" level="project" />
     <orderEntry type="library" name="SBT: com.softwaremill.sttp:core_2.12:1.1.4:jar" level="project" />
     <orderEntry type="library" name="SBT: org.jsoup:jsoup:1.8.3:jar" level="project" />
     <orderEntry type="library" name="SBT: org.scala-lang:scala-reflect:2.12.4:jar" level="project" />
