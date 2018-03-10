@@ -30,11 +30,12 @@ object Main extends App {
     .asScala.toList
     .map(_.text)
 
-  def standardize(l: List[String]): List[Ingredient] =
-    decode[List[Ingredient]](
+  def standardize(l: List[List[String]]): List[List[Ingredient]] =
+    decode[List[List[Ingredient]]](
       new JsonRpcHttpClient(new java.net.URL("http://localhost:4000/jsonrpc"))
-        .invoke("parse_ingredients", l.asJava, classOf[String])
+        .invoke("parse_all", l.map(_.asJava).asJava, classOf[String]) // convert list of lists to java to use with library
     ) match { case Right(x) => x }
+
 
   def isIngredientList(l: List[Ingredient]): Boolean =
     if (l.isEmpty) false
@@ -63,24 +64,23 @@ object Main extends App {
   // end hard coding stuff to remove
 
   val unorderedLists = doc.getElementsByTag("ul").asScala.toList
-  val (normalIngredients: List[Ingredient], sketchyIngredients: List[Ingredient]) = unorderedLists
-    .map(stringify) // take all raw text and separate with newlines
-    .map(standardize) // convert text to case class
+  val (normalIngredients: List[Ingredient], sketchyIngredients: List[Ingredient]) =
+    standardize(unorderedLists.map(stringify))
     .filter(isIngredientList) // take out most things that aren't ingredients
     .flatten // combine to one list of ingredients
     .partition { // separate between sketchy and normal ingredients
       case Ingredient(_, None, None) => false
       case _ => true
     }
-//
-//  val ingredients: Future[List[Ingredient]] = for {
-//    validatedIngredients <- sketchyIngredients.traverse(makeRequest) map { _
-//      .map(validateIngredient) // make api call to validate
-//      .zip(sketchyIngredients)
-//      .filter { case (bool, _) => bool } // filter out ones that are invalid
-//      .map { case (_, value) => value }
-//    }
-//  } yield normalIngredients ::: validatedIngredients
+
+  val ingredients: Future[List[Ingredient]] = for {
+    validatedIngredients <- sketchyIngredients.traverse(makeRequest) map { _
+      .map(validateIngredient) // make api call to validate
+      .zip(sketchyIngredients)
+      .filter { case (bool, _) => bool } // filter out ones that are invalid
+      .map { case (_, value) => value }
+    }
+  } yield normalIngredients ::: validatedIngredients
 //
 //  ingredients onComplete {
 //    case Success(r) => println(r)
