@@ -11,7 +11,6 @@ libraryDependencies ++= Seq(
   "org.jsoup" % "jsoup" % "1.8.3",
   "com.softwaremill.sttp" %% "core" % "1.1.4",
   "com.softwaremill.sttp" %% "async-http-client-backend-future" % "1.1.4",
-  "com.github.briandilley.jsonrpc4j" % "jsonrpc4j" % "1.5.3"
 )
 
 val circeVersion = "0.9.1"

@@ -7,22 +7,19 @@ import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.util.{Failure, Success}
 import scala.collection.JavaConverters._
-
-import com.googlecode.jsonrpc4j.JsonRpcHttpClient
-
 import io.circe._
 import io.circe.parser._
 import io.circe.syntax._
-
+import io.circe.generic.semiauto._
 import com.softwaremill.sttp._
 import com.softwaremill.sttp.asynchttpclient.future.AsyncHttpClientFutureBackend
 
-
 case class Ingredient(name: Option[String], unit: Option[String], qty: Option[String])
+case class ParserPayload(method: String, params: List[List[String]], jsonrpc: String = "2.0", id: Int = 0)
 
 object Main extends App {
 
-  implicit val sttpBackend: SttpBackend[Future, Nothing] = AsyncHttpClientFutureBackend()
+  implicit val encodePayload: Encoder[ParserPayload] = deriveEncoder
   implicit val decodeIngredient: Decoder[Ingredient] = Decoder.forProduct3("name", "unit", "qty")(Ingredient.apply)
 
   def stringify(ul: Element): List[String] = ul
@@ -30,12 +27,13 @@ object Main extends App {
     .asScala.toList
     .map(_.text)
 
-  def standardize(l: List[List[String]]): List[List[Ingredient]] =
-    decode[List[List[Ingredient]]](
-      new JsonRpcHttpClient(new java.net.URL("http://localhost:4000/jsonrpc"))
-        .invoke("parse_all", l.map(_.asJava).asJava, classOf[String]) // convert list of lists to java to use with library
-    ) match { case Right(x) => x }
-
+  def callParser(l: List[List[String]]): Response[String] = {
+    implicit val syncBackend: SttpBackend[Id, Nothing] = HttpURLConnectionBackend()
+    sttp
+      .body( ParserPayload("parse_all", l).asJson.toString )
+      .post(uri"http://localhost:4000/jsonrpc")
+      .send()
+  }
 
   def isIngredientList(l: List[Ingredient]): Boolean =
     if (l.isEmpty) false
@@ -44,9 +42,12 @@ object Main extends App {
       case _ => false
     } / l.length.toFloat >= .75 // some arbitrary number
 
-  def makeRequest(i: Ingredient): Future[Response[String]] = sttp // eventually use word2vec for this
-    .get(uri"https://api.edamam.com/api/food-database/parser?ingr=${i.name}&app_id=$appID&app_key=$appKey")
-    .send()
+  def callValidator(i: Ingredient): Future[Response[String]] = {
+    implicit val asyncBackend: SttpBackend[Future, Nothing] = AsyncHttpClientFutureBackend()
+    sttp // eventually use word2vec for this
+      .get(uri"https://api.edamam.com/api/food-database/parser?ingr=${i.name}&app_id=$appID&app_key=$appKey")
+      .send()
+  }
 
   def validateIngredient(r: Response[String]): Boolean = parse(r.unsafeBody)
     .getOrElse(Json.Null)
@@ -63,9 +64,16 @@ object Main extends App {
     doc.select("[ng-cloak]").remove()
   // end hard coding stuff to remove
 
-  val unorderedLists = doc.getElementsByTag("ul").asScala.toList
-  val (normalIngredients: List[Ingredient], sketchyIngredients: List[Ingredient]) =
-    standardize(unorderedLists.map(stringify))
+  val unorderedLists: List[List[String]] = doc
+    .getElementsByTag("ul")
+    .asScala.toList
+    .map(stringify)
+
+  val JSONResponse: String = callParser(unorderedLists).unsafeBody
+  val parsedIngredients: List[List[Ingredient]] = decode[List[List[Ingredient]]](JSONResponse)
+    .getOrElse(throw new Exception("couldn't decode"))
+
+  val (normalIngredients: List[Ingredient], sketchyIngredients: List[Ingredient]) = parsedIngredients
     .filter(isIngredientList) // take out most things that aren't ingredients
     .flatten // combine to one list of ingredients
     .partition { // separate between sketchy and normal ingredients
@@ -73,19 +81,14 @@ object Main extends App {
       case _ => true
     }
 
-  val ingredients: Future[List[Ingredient]] = for {
-    validatedIngredients <- sketchyIngredients.traverse(makeRequest) map { _
+  for {
+    validatedIngredients <- sketchyIngredients.traverse(callValidator) map { _
       .map(validateIngredient) // make api call to validate
       .zip(sketchyIngredients)
       .filter { case (bool, _) => bool } // filter out ones that are invalid
       .map { case (_, value) => value }
     }
   } yield normalIngredients ::: validatedIngredients
-//
-//  ingredients onComplete {
-//    case Success(r) => println(r)
-//    case Failure(e) => println(e) // throw exception probably
-//  }
 
 }
 

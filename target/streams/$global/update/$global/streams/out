@@ -635,65 +635,6 @@
 [debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->default(compile)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] sbt-chain: Checking cache for: dependency: com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 {compile=[default(compile)]}
-[debug] sbt-chain: module revision found in cache: com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3
-[debug] 	found com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 in sbt-chain
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->runtime(*)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] sbt-chain: Checking cache for: dependency: net.iharder#base64;2.3.9 {runtime=[compile(*), runtime(*), master(compile)]}
-[debug] sbt-chain: module revision found in cache: net.iharder#base64;2.3.9
-[debug] 	found net.iharder#base64;2.3.9 in sbt-chain
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.22 [runtime->runtime(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->runtime(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.22 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.22 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->runtime(*)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] sbt-chain: Checking cache for: dependency: com.fasterxml.jackson.core#jackson-core;2.8.5 {runtime=[compile(*), runtime(*), master(compile)]}
-[debug] sbt-chain: module revision found in cache: com.fasterxml.jackson.core#jackson-core;2.8.5
-[debug] 	found com.fasterxml.jackson.core#jackson-core;2.8.5 in sbt-chain
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->runtime(*)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] sbt-chain: Checking cache for: dependency: com.fasterxml.jackson.core#jackson-databind;2.8.5 {runtime=[compile(*), runtime(*), master(compile)]}
-[debug] sbt-chain: module revision found in cache: com.fasterxml.jackson.core#jackson-databind;2.8.5
-[debug] 	found com.fasterxml.jackson.core#jackson-databind;2.8.5 in sbt-chain
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.0 [compile->master(compile)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.0 [compile->compile(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->master(compile)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.0 [runtime->runtime(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->runtime(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->runtime(*)]
-[debug] sbt-chain: Checking cache for: dependency: com.fasterxml.jackson.core#jackson-annotations;2.8.5 {runtime=[compile(*), runtime(*), master(compile)]}
-[debug] sbt-chain: module revision found in cache: com.fasterxml.jackson.core#jackson-annotations;2.8.5
-[debug] 	found com.fasterxml.jackson.core#jackson-annotations;2.8.5 in sbt-chain
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile(*)]
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
 [debug] == resolving dependencies default#playingwithcats_2.12;0.1->io.circe#circe-core_2.12;0.9.1 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
@@ -1764,64 +1705,6 @@
 [debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->default(compile)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->runtime(*)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.22 [runtime->runtime(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->runtime(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.22 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.22 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->runtime(*)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->runtime(*)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.0 [compile->master(compile)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->master(compile)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.0 [compile->compile(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->master(compile)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.0 [runtime->runtime(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->runtime(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->runtime(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->runtime(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile(*)]
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
 [debug] == resolving dependencies default#playingwithcats_2.12;0.1->io.circe#circe-core_2.12;0.9.1 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
@@ -2895,74 +2778,6 @@
 [debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->default(compile)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->runtime(*)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.22 [runtime->runtime(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->runtime(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.22 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.22 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->runtime(*)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->runtime(*)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.0 [compile->master(compile)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->master(compile)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.0 [compile->compile(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->master(compile)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.0 [runtime->runtime(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->runtime(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->runtime(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->runtime(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile(*)]
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
 [debug] == resolving dependencies default#playingwithcats_2.12;0.1->io.circe#circe-core_2.12;0.9.1 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
@@ -4105,84 +3920,6 @@
 [debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->default(compile)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->runtime(*)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.22 [runtime->runtime(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->runtime(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.22 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.22 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->runtime(*)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->runtime(*)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.0 [compile->master(compile)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->master(compile)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.0 [compile->compile(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->master(compile)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.0 [runtime->runtime(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->runtime(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->runtime(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->runtime(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile(*)]
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
 [debug] == resolving dependencies default#playingwithcats_2.12;0.1->io.circe#circe-core_2.12;0.9.1 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
@@ -5340,84 +5077,6 @@
 [debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->default(compile)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->runtime(*)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.22 [runtime->runtime(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->runtime(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.22 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.22 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->runtime(*)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->runtime(*)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.0 [compile->master(compile)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->master(compile)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.0 [compile->compile(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->master(compile)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.0 [runtime->runtime(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->runtime(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->runtime(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->runtime(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile(*)]
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
 [debug] == resolving dependencies default#playingwithcats_2.12;0.1->io.circe#circe-core_2.12;0.9.1 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
@@ -6675,104 +6334,6 @@
 [debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4 [compile->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->default(compile)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->runtime]
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->runtime(*)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->net.iharder#base64;2.3.9 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.22 [runtime->runtime(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->runtime(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.22 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.22 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->org.slf4j#slf4j-api;1.7.25 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->runtime(*)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->runtime(*)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.0 [compile->master(compile)]
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
-[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->master(compile)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.0 [compile->compile(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [compile->compile(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->master(compile)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [compile->compile(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.0 [runtime->runtime(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->runtime(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->runtime(*)]
-[debug] == resolving dependencies com.fasterxml.jackson.core#jackson-databind;2.8.5->com.fasterxml.jackson.core#jackson-core;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-databind;2.8.5 [runtime->compile(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->runtime(*)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->master(compile)]
-[debug] == resolving dependencies com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3->com.fasterxml.jackson.core#jackson-annotations;2.8.5 [runtime->compile(*)]
-[debug] == resolving dependencies default#playingwithcats_2.12;0.1->com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3 [compile->master]
 [debug] == resolving dependencies default#playingwithcats_2.12;0.1->io.circe#circe-core_2.12;0.9.1 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)], compile=[default(compile)]}
@@ -7411,176 +6972,171 @@
 [debug] ignoring unhandled DependencyDescriptorMediator: class sbt.internal.librarymanagement.IvyScalaUtil$OverrideScalaMediator
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
-[debug] 	[NOT REQUIRED] com.chuusai#shapeless_2.12;2.3.3!shapeless_2.12.jar(bundle)
-[debug] 	[NOT REQUIRED] org.typelevel#machinist_2.12;0.6.2!machinist_2.12.jar
-[debug] 	[NOT REQUIRED] io.netty#netty-buffer;4.0.54.Final!netty-buffer.jar
-[debug] 	[NOT REQUIRED] io.circe#circe-numbers_2.12;0.9.1!circe-numbers_2.12.jar
-[debug] 	[NOT REQUIRED] com.github.briandilley.jsonrpc4j#jsonrpc4j;1.5.3!jsonrpc4j.jar
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.4!scala-library.jar
-[debug] 	[NOT REQUIRED] net.iharder#base64;2.3.9!base64.jar(bundle)
-[debug] 	[NOT REQUIRED] io.circe#circe-parser_2.12;0.9.1!circe-parser_2.12.jar
-[debug] no default ivy user dir defined: set to /Users/lee/.ivy2
-[debug] no default ivy user dir defined: set to /Users/lee/.ivy2
-[debug] no default ivy user dir defined: set to /Users/lee/.ivy2
-[debug] no default ivy user dir defined: set to /Users/lee/.ivy2
-[debug] no default ivy user dir defined: set to /Users/lee/.ivy2
-[debug] no default ivy user dir defined: set to /Users/lee/.ivy2
-[debug] no default ivy user dir defined: set to /Users/lee/.ivy2
-[debug] no default ivy user dir defined: set to /Users/lee/.ivy2
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] no default cache defined: set to /Users/lee/.ivy2/cache
-[debug] no default cache defined: set to /Users/lee/.ivy2/cache
-[debug] no default cache defined: set to /Users/lee/.ivy2/cache
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] no default cache defined: set to /Users/lee/.ivy2/cache
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] no default cache defined: set to /Users/lee/.ivy2/cache
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] no default cache defined: set to /Users/lee/.ivy2/cache
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] no default cache defined: set to /Users/lee/.ivy2/cache
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] no default cache defined: set to /Users/lee/.ivy2/cache
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] settings loaded (54ms)
-[debug] 	default cache: /Users/lee/.ivy2/cache
-[debug] 	default resolver: default
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] 	[NOT REQUIRED] io.circe#circe-core_2.12;0.9.1!circe-core_2.12.jar
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] 	[NOT REQUIRED] io.circe#circe-generic_2.12;0.9.1!circe-generic_2.12.jar
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (66ms)
-[debug] 	default cache: /Users/lee/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] settings loaded (67ms)
-[debug] 	default cache: /Users/lee/.ivy2/cache
-[debug] settings loaded (66ms)
-[debug] 	default resolver: default
-[debug] 	default cache: /Users/lee/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	public [ibiblio]
-[debug] 	[NOT REQUIRED] org.typelevel#cats-core_2.12;1.0.1!cats-core_2.12.jar
-[debug] 	main [chain] [shared, public]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] 	local [file]
-[debug] settings loaded (68ms)
-[debug] 	default cache: /Users/lee/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] 	[NOT REQUIRED] org.typelevel#cats-macros_2.12;1.0.1!cats-macros_2.12.jar
-[debug] 	[NOT REQUIRED] io.circe#circe-jawn_2.12;0.9.1!circe-jawn_2.12.jar
-[debug] 	[NOT REQUIRED] org.jsoup#jsoup;1.8.3!jsoup.jar
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] 	[NOT REQUIRED] org.typelevel#cats-kernel_2.12;1.0.1!cats-kernel_2.12.jar
-[debug] 	[NOT REQUIRED] org.spire-math#jawn-parser_2.12;0.11.0!jawn-parser_2.12.jar
-[debug] 	[NOT REQUIRED] com.softwaremill.sttp#core_2.12;1.1.4!core_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.4!scala-compiler.jar
-[debug] 	[NOT REQUIRED] org.typelevel#macro-compat_2.12;1.1.1!macro-compat_2.12.jar
-[debug] 	[NOT REQUIRED] com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4!async-http-client-backend-future_2.12.jar
-[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(bundle)
-[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-core;2.8.5!jackson-core.jar(bundle)
-[debug] settings loaded (71ms)
-[debug] 	default cache: /Users/lee/.ivy2/cache
-[debug] 	[NOT REQUIRED] jline#jline;2.14.5!jline.jar
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-databind;2.8.5!jackson-databind.jar(bundle)
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] 	[NOT REQUIRED] io.netty#netty-handler;4.0.54.Final!netty-handler.jar
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.4!scala-reflect.jar
-[debug] settings loaded (72ms)
-[debug] 	default cache: /Users/lee/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	[NOT REQUIRED] com.softwaremill.sttp#async-http-client-backend_2.12;1.1.4!async-http-client-backend_2.12.jar
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] 	[NOT REQUIRED] io.netty#netty-transport-native-epoll;4.0.54.Final!netty-transport-native-epoll.jar
-[debug] 	[NOT REQUIRED] org.asynchttpclient#async-http-client;2.0.38!async-http-client.jar
-[debug] 	[NOT REQUIRED] io.netty#netty-transport;4.0.54.Final!netty-transport.jar
-[debug] 	[NOT REQUIRED] org.reactivestreams#reactive-streams;1.0.0!reactive-streams.jar
-[debug] 	[NOT REQUIRED] org.asynchttpclient#async-http-client-netty-utils;2.0.38!async-http-client-netty-utils.jar
-[debug] 	[NOT REQUIRED] org.asynchttpclient#netty-resolver;2.0.38!netty-resolver.jar
 [debug] 	[NOT REQUIRED] com.typesafe.netty#netty-reactive-streams;1.0.8!netty-reactive-streams.jar
-[debug] 	[NOT REQUIRED] io.netty#netty-common;4.0.54.Final!netty-common.jar
+[debug] 	[NOT REQUIRED] io.netty#netty-buffer;4.0.54.Final!netty-buffer.jar
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.4!scala-library.jar
+[debug] 	[NOT REQUIRED] io.circe#circe-core_2.12;0.9.1!circe-core_2.12.jar
 [debug] 	[NOT REQUIRED] io.netty#netty-codec-http;4.0.54.Final!netty-codec-http.jar
-[debug] 	[NOT REQUIRED] io.netty#netty-codec;4.0.54.Final!netty-codec.jar
-[debug] 	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.25!slf4j-api.jar
-[debug] 	[NOT REQUIRED] org.asynchttpclient#netty-resolver-dns;2.0.38!netty-resolver-dns.jar
-[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-annotations;2.8.5!jackson-annotations.jar(bundle)
-[debug] 	[NOT REQUIRED] org.asynchttpclient#netty-codec-dns;2.0.38!netty-codec-dns.jar
-[debug] settings loaded (78ms)
+[debug] 	[NOT REQUIRED] io.netty#netty-transport;4.0.54.Final!netty-transport.jar
+[debug] 	[NOT REQUIRED] org.typelevel#cats-core_2.12;1.0.1!cats-core_2.12.jar
+[debug] 	[NOT REQUIRED] org.typelevel#machinist_2.12;0.6.2!machinist_2.12.jar
+[debug] no default ivy user dir defined: set to /Users/lee/.ivy2
+[debug] no default ivy user dir defined: set to /Users/lee/.ivy2
+[debug] no default ivy user dir defined: set to /Users/lee/.ivy2
+[debug] no default ivy user dir defined: set to /Users/lee/.ivy2
+[debug] no default ivy user dir defined: set to /Users/lee/.ivy2
+[debug] no default ivy user dir defined: set to /Users/lee/.ivy2
+[debug] no default ivy user dir defined: set to /Users/lee/.ivy2
+[debug] no default ivy user dir defined: set to /Users/lee/.ivy2
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] no default cache defined: set to /Users/lee/.ivy2/cache
+[debug] no default cache defined: set to /Users/lee/.ivy2/cache
+[debug] no default cache defined: set to /Users/lee/.ivy2/cache
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] no default cache defined: set to /Users/lee/.ivy2/cache
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] no default cache defined: set to /Users/lee/.ivy2/cache
+[debug] no default cache defined: set to /Users/lee/.ivy2/cache
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] no default cache defined: set to /Users/lee/.ivy2/cache
+[debug] no default cache defined: set to /Users/lee/.ivy2/cache
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/lee/.sbt/boot/scala-2.12.4/org.scala-sbt/sbt/1.0.4/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (57ms)
+[debug] settings loaded (57ms)
+[debug] settings loaded (57ms)
+[debug] settings loaded (57ms)
+[debug] 	default cache: /Users/lee/.ivy2/cache
+[debug] 	default cache: /Users/lee/.ivy2/cache
+[debug] 	default cache: /Users/lee/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	default resolver: default
+[debug] 	default cache: /Users/lee/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] settings loaded (57ms)
+[debug] 	-- 5 resolvers:
+[debug] 	-- 5 resolvers:
 [debug] 	default cache: /Users/lee/.ivy2/cache
 [debug] 	default resolver: default
 [debug] 	-- 5 resolvers:
 [debug] 	shared [file]
+[debug] 	shared [file]
+[debug] 	default resolver: default
+[debug] 	shared [file]
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	shared [file]
+[debug] settings loaded (57ms)
+[debug] settings loaded (57ms)
+[debug] 	default cache: /Users/lee/.ivy2/cache
+[debug] 	default cache: /Users/lee/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	shared [file]
 [debug] 	default [chain] [local, main]
+[debug] 	default [chain] [local, main]
+[debug] 	default [chain] [local, main]
+[debug] 	default [chain] [local, main]
+[debug] 	default [chain] [local, main]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	public [ibiblio]
+[debug] 	public [ibiblio]
+[debug] 	public [ibiblio]
+[debug] 	public [ibiblio]
+[debug] 	public [ibiblio]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] settings loaded (58ms)
+[debug] 	default cache: /Users/lee/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	main [chain] [shared, public]
+[debug] 	main [chain] [shared, public]
+[debug] 	main [chain] [shared, public]
+[debug] 	-- 5 resolvers:
+[debug] 	main [chain] [shared, public]
+[debug] 	shared [file]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	local [file]
+[debug] 	local [file]
+[debug] 	main [chain] [shared, public]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	local [file]
+[debug] 	default [chain] [local, main]
+[debug] 	local [file]
+[debug] 	local [file]
 [debug] 	public [ibiblio]
 [debug] 	main [chain] [shared, public]
 [debug] 	local [file]
-[debug] :: resolution report :: resolve 1331ms :: artifacts dl 99ms
+[debug] 	[NOT REQUIRED] org.asynchttpclient#netty-resolver;2.0.38!netty-resolver.jar
+[debug] 	[NOT REQUIRED] io.circe#circe-generic_2.12;0.9.1!circe-generic_2.12.jar
+[debug] 	[NOT REQUIRED] io.netty#netty-common;4.0.54.Final!netty-common.jar
+[debug] 	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.25!slf4j-api.jar
+[debug] 	[NOT REQUIRED] io.netty#netty-handler;4.0.54.Final!netty-handler.jar
+[debug] 	[NOT REQUIRED] org.jsoup#jsoup;1.8.3!jsoup.jar
+[debug] 	[NOT REQUIRED] org.typelevel#cats-macros_2.12;1.0.1!cats-macros_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.4!scala-reflect.jar
+[debug] 	[NOT REQUIRED] com.softwaremill.sttp#core_2.12;1.1.4!core_2.12.jar
+[debug] 	[NOT REQUIRED] org.asynchttpclient#netty-codec-dns;2.0.38!netty-codec-dns.jar
+[debug] 	[NOT REQUIRED] io.circe#circe-parser_2.12;0.9.1!circe-parser_2.12.jar
+[debug] 	[NOT REQUIRED] io.netty#netty-codec;4.0.54.Final!netty-codec.jar
+[debug] 	[NOT REQUIRED] com.softwaremill.sttp#async-http-client-backend_2.12;1.1.4!async-http-client-backend_2.12.jar
+[debug] 	[NOT REQUIRED] org.typelevel#cats-kernel_2.12;1.0.1!cats-kernel_2.12.jar
+[debug] 	[NOT REQUIRED] com.softwaremill.sttp#async-http-client-backend-future_2.12;1.1.4!async-http-client-backend-future_2.12.jar
+[debug] 	[NOT REQUIRED] io.circe#circe-numbers_2.12;0.9.1!circe-numbers_2.12.jar
+[debug] 	[NOT REQUIRED] org.asynchttpclient#async-http-client;2.0.38!async-http-client.jar
+[debug] 	[NOT REQUIRED] io.netty#netty-transport-native-epoll;4.0.54.Final!netty-transport-native-epoll.jar
+[debug] 	[NOT REQUIRED] org.typelevel#macro-compat_2.12;1.1.1!macro-compat_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.4!scala-compiler.jar
+[debug] 	[NOT REQUIRED] io.circe#circe-jawn_2.12;0.9.1!circe-jawn_2.12.jar
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(bundle)
+[debug] 	[NOT REQUIRED] org.spire-math#jawn-parser_2.12;0.11.0!jawn-parser_2.12.jar
+[debug] 	[NOT REQUIRED] org.asynchttpclient#netty-resolver-dns;2.0.38!netty-resolver-dns.jar
+[debug] 	[NOT REQUIRED] org.asynchttpclient#async-http-client-netty-utils;2.0.38!async-http-client-netty-utils.jar
+[debug] 	[NOT REQUIRED] com.chuusai#shapeless_2.12;2.3.3!shapeless_2.12.jar(bundle)
+[debug] 	[NOT REQUIRED] jline#jline;2.14.5!jline.jar
+[debug] 	[NOT REQUIRED] org.reactivestreams#reactive-streams;1.0.0!reactive-streams.jar
+[debug] :: resolution report :: resolve 1242ms :: artifacts dl 90ms
 [debug] 	report for default#playingwithcats_2.12;0.1 compile produced in /Users/lee/Development/playingWithCats/target/scala-2.12/resolution-cache/reports/default-playingwithcats_2.12-compile.xml
 [debug] 	report for default#playingwithcats_2.12;0.1 runtime produced in /Users/lee/Development/playingWithCats/target/scala-2.12/resolution-cache/reports/default-playingwithcats_2.12-runtime.xml
 [debug] 	report for default#playingwithcats_2.12;0.1 test produced in /Users/lee/Development/playingWithCats/target/scala-2.12/resolution-cache/reports/default-playingwithcats_2.12-test.xml
@@ -7592,7 +7148,7 @@
 [debug] 	report for default#playingwithcats_2.12;0.1 plugin produced in /Users/lee/Development/playingWithCats/target/scala-2.12/resolution-cache/reports/default-playingwithcats_2.12-plugin.xml
 [debug] 	report for default#playingwithcats_2.12;0.1 pom produced in /Users/lee/Development/playingWithCats/target/scala-2.12/resolution-cache/reports/default-playingwithcats_2.12-pom.xml
 [debug] 	report for default#playingwithcats_2.12;0.1 scala-tool produced in /Users/lee/Development/playingWithCats/target/scala-2.12/resolution-cache/reports/default-playingwithcats_2.12-scala-tool.xml
-[debug] 	resolve done (1331ms resolve - 99ms download)
+[debug] 	resolve done (1242ms resolve - 90ms download)
 [info] Done updating.
 [warn] Found version conflict(s) in library dependencies; some are suspected to be binary incompatible:
 [warn] 	* io.netty:netty-handler:4.0.54.Final is selected over 4.0.41.Final
