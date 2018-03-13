@@ -1,4 +1,4 @@
 .idea
 project
 target
-src/main/scala/AppConfig.scala
+AppConfig.scala
