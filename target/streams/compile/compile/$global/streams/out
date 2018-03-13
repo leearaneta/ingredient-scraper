@@ -1,11 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/lee/Development/playingWithCats/src/main/scala/Main.scala:76:26: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : scala.concurrent.Future[List[Ingredient]][0m
-[0m[[0m[31merror[0m] [0m[0m required: scala.util.Either[?,?][0m
-[0m[[0m[31merror[0m] [0m[0m    validatedIngredients <- sketchyIngredients.traverse(makeRequest) map { _[0m
-[0m[[0m[31merror[0m] [0m[0m                         ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/lee/Development/playingWithCats/src/main/scala/Main.scala:68:23: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : scala.util.Either[io.circe.Error,Nothing][0m
-[0m[[0m[31merror[0m] [0m[0m required: scala.concurrent.Future[?][0m
-[0m[[0m[31merror[0m] [0m[0m    parsedIngredients <- decode[List[List[Ingredient]]](ingredientsJSON.unsafeBody)[0m
-[0m[[0m[31merror[0m] [0m[0m                      ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/lee/Development/playingWithCats/src/main/scala/Main.scala:75:1: '<-' expected but ';' found.[0m
+[0m[[0m[31merror[0m] [0m[0m    (normalIngredients, sketchyIngredients) = decode[List[List[Ingredient]]](jsonString)[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
