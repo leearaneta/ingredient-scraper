@@ -1,89 +1,99 @@
+import AppConfig._
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
+import cats.implicits._
 
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
-import scala.util.{Success, Failure}
 import scala.collection.JavaConverters._
-import sys.process._
-import org.json4s._
-import org.json4s.native.JsonMethods._
+
+import io.circe._
+import io.circe.parser._
+import io.circe.syntax._
+import io.circe.generic.semiauto._
+
 import com.softwaremill.sttp._
 import com.softwaremill.sttp.asynchttpclient.future.AsyncHttpClientFutureBackend
 
 case class Ingredient(name: Option[String], unit: Option[String], qty: Option[String])
+case class ParserPayload(method: String, params: List[List[String]], jsonrpc: String = "2.0", id: Int = 0)
+case class ParserResponse(jsonrpc: String, result: List[List[Ingredient]], id: Int)
 
 object Main extends App {
 
-  implicit val formats = DefaultFormats
+  implicit val encodePayload: Encoder[ParserPayload] = deriveEncoder
+  implicit val encodeIngredientList: Encoder[Ingredient] = deriveEncoder
+  implicit val decodeResponse: Decoder[ParserResponse] = deriveDecoder
+  implicit val decodeIngredient: Decoder[Ingredient] = Decoder.forProduct3("name", "unit", "qty")(Ingredient.apply)
+  implicit val asyncBackend: SttpBackend[Future, Nothing] = AsyncHttpClientFutureBackend()
 
-  def stringify(ul: Element): String = ul
+  def stringify(ul: Element): List[String] = ul
     .getElementsByTag("li")
     .asScala.toList
     .map(_.text)
-    .fold("") { _ + "\n" + _ }
 
-  def standardize(s: String): String = {
-    val path = "python ../ingredient-phrase-tagger/bin/"
-    val parserFile = path + "parse-ingredients.py"
-    val converterFile = path + "convert-to-json.py"
-    Seq("echo", s) #| parserFile #| converterFile !! // wrap this in IO monad or something
-  }
+  def callParser(l: List[List[String]]): Future[Response[String]] = sttp
+    .header("content-type", "application/json")
+    .body( ParserPayload("parse_all", l).asJson.toString )
+    .post(uri"http://localhost:4000/jsonrpc")
+    .send()
 
-  def format(s: String): List[Ingredient] = parse(s).extract[List[Ingredient]]
-
-  def isIngredientList(l: List[Ingredient]): Boolean = {
-    if (l.isEmpty) return false
-    val valid: List[Ingredient] = l filter {
+  def isIngredientList(l: List[Ingredient]): Boolean =
+    if (l.isEmpty) false
+    else l.count {
       case Ingredient(_, Some(_), Some(_)) => true
       case _ => false
+    } / l.length.toFloat >= .5 // some arbitrary number
+
+  def callValidator(i: Ingredient): Future[Response[String]] = sttp // eventually use word2vec for this
+    .get(uri"https://api.edamam.com/api/food-database/parser?ingr=${i.name}&app_id=$appID&app_key=$appKey")
+    .send()
+
+  def validateIngredient(r: Response[String]): Boolean = parse(r.unsafeBody)
+    .getOrElse(Json.Null)
+    .hcursor
+    .get[List[String]]("parsed") match {
+      case Right(x) => x.nonEmpty
+      case Left(_) => false
     }
-    valid.length / l.length.toFloat >= .75 // some arbitrary number
-  }
 
-  def makeRequest(i: Ingredient): Future[Response[String]] = {
-    implicit val sttpBackend = AsyncHttpClientFutureBackend()
-    val appID = "5c3b30f0" // hide these
-    val appKey = "6e4e5e4c702f73d47f0f1cd6937b225b"
-    val requestURL = uri"https://api.edamam.com/api/food-database/parser?ingr=${i.name}&app_id=$appID&app_key=$appKey"
-    sttp.get(requestURL).send()
-  }
-
-  def extractJSON(r: Response[String]): Boolean = {
-    val JSON = r.unsafeBody
-    val JArray(x) = parse(JSON) \ "parsed"
-    x.isEmpty
-  }
-
-  val url = "http://allrecipes.com/recipe/9027/kung-pao-chicken/"
+  val url = "https://www.allrecipes.com/recipe/9027/kung-pao-chicken/"
   val doc = Jsoup.connect(url).timeout(10000).get()
-
   // begin hard coding stuff to remove
-    doc.select("[ng-cloak]").remove()
+  doc.select("[ng-cloak]").remove()
   // end hard coding stuff to remove
 
-  val unorderedLists = doc.getElementsByTag("ul").asScala.toList
+  val unorderedLists: List[List[String]] = doc
+    .getElementsByTag("ul")
+    .asScala.toList
+    .map(stringify)
 
-  unorderedLists
-    .map(stringify) // take all raw text and separate with newlines
-    .map(standardize) // standardize using model
-    .map(format) // convert to ingredient case class
-    .filter(isIngredientList) // take out most things that aren't ingredients
-    .flatten // combine to one list of ingredients
-    .groupBy { // separate between sketchy and normal ingredients
-      case Ingredient(_, None, None) => "sketchy"
-      case _ => "normal"
+  val ingredients: Future[String] = for {
+    response <- callParser(unorderedLists)
+    jsonString = response.unsafeBody
+    (normalIngredients, sketchyIngredients) = decode[ParserResponse](jsonString)
+      .getOrElse(throw new Exception("couldn't decode")).result // take right side of either
+      .filter(isIngredientList) // ta most things that aren't ingredients
+      .flatten // combine to one list of ingredients
+      .partition { // separate between sketchy and normal ingredients
+      case Ingredient(_, None, None) => false
+      case _ => true
     }
-    .map {
-      case ("sketchy", sketchyIngredients) => Future.traverse(sketchyIngredients)(makeRequest) onComplete {
-        case Success(r: List[Response[String]]) => r
-          .map(extractJSON)
-          .zip(sketchyIngredients)
-          .filter { case (bool, _) => bool }
-          .map { case (_, value) => value }
-        case _ => List.empty[Ingredient]
-      } // should just use monad transformers
-      case ("normal", normalIngredients) => normalIngredients
+    validatedIngredients <- sketchyIngredients.traverse(callValidator) map { _
+      .map(validateIngredient) // make api call to validate
+      .zip(sketchyIngredients)
+      .filter { case (bool, _) => bool } // filter out ones that are invalid
+      .map { case (_, value) => value }
     }
+  } yield (normalIngredients ::: validatedIngredients).asJson.toString
 
 }
+
+//  def suspectList(e: Element): Boolean =
+//    if (e.children.size < 3) false
+//    else e.children.asScala.toList
+//      .map { child => (child.tagName, child.className) }
+//      .groupBy(identity).mapValues(_.size).values
+//      .max >= e.children.size / 2.toFloat
+
+// perform suspectList on ALL nodes
