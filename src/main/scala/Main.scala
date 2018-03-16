@@ -1,12 +1,11 @@
 import AppConfig._
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
-import cats.implicits._
 
-import futureconvert._
-import scala.concurrent.Future
+import com.twitter.finagle.{Http, Service}
+import com.twitter.finagle.http.{Request, Response, Method}
+import com.twitter.util.{Await, Future}
 
-import scala.concurrent.ExecutionContext.Implicits.global
 import scala.collection.JavaConverters._
 
 import io.circe._
@@ -14,32 +13,31 @@ import io.circe.parser._
 import io.circe.syntax._
 import io.circe.generic.semiauto._
 
-import com.softwaremill.sttp._
-import com.softwaremill.sttp.asynchttpclient.future.AsyncHttpClientFutureBackend
+import io.finch._
+import io.finch.syntax._
+import io.finch.circe._
 
 case class Ingredient(name: Option[String], unit: Option[String], qty: Option[String])
 case class ParserPayload(method: String, params: List[List[String]], jsonrpc: String = "2.0", id: Int = 0)
-case class ParserResponse(jsonrpc: String, result: List[List[Ingredient]], id: Int)
-
 
 object Main extends App {
 
   implicit val encodePayload: Encoder[ParserPayload] = deriveEncoder
-  implicit val encodeIngredientList: Encoder[Ingredient] = deriveEncoder
-  implicit val decodeResponse: Decoder[ParserResponse] = deriveDecoder
+  implicit val encodeIngredient: Encoder[Ingredient] = deriveEncoder
   implicit val decodeIngredient: Decoder[Ingredient] = Decoder.forProduct3("name", "unit", "qty")(Ingredient.apply)
-  implicit val asyncBackend: SttpBackend[Future, Nothing] = AsyncHttpClientFutureBackend()
 
   def stringify(ul: Element): List[String] = ul
     .getElementsByTag("li")
     .asScala.toList
     .map(_.text)
 
-  def callParser(l: List[List[String]]): Future [Response[String]] = sttp
-    .header("content-type", "application/json")
-    .body( ParserPayload("parse_all", l).asJson.toString )
-    .post(uri"http://localhost:4000/jsonrpc")
-    .send()
+  def callParser(l: List[List[String]]): Future[String] = {
+    val jsonString: String = ParserPayload("parse_all", l).asJson.toString()
+    val client: Service[Request, Response] = Http.newService("localhost:4000")
+    val request: Request = Request(Method.Post, "/jsonrpc")
+    request.setContentString(jsonString)
+    client(request).map(_.contentString)
+  }
 
   def isIngredientList(l: List[Ingredient]): Boolean =
     if (l.isEmpty) false
@@ -48,49 +46,68 @@ object Main extends App {
       case _ => false
     } / l.length.toFloat > .5 // some arbitrary number
 
-  def callValidator(i: Ingredient): Future[Response[String]] = sttp // eventually use word2vec for this
-    .get(uri"https://api.edamam.com/api/food-database/parser?ingr=${i.name}&app_id=$appID&app_key=$appKey")
-    .send()
+  def callValidator(i: Ingredient): Future[String] = {
+    // eventually use word2vec for this
+    val baseURL = "https://api.edamam.com/api"
+    val endpoint = s"food-database/parser?ingr=${i.name}&app_id=$appID&app_key=$appKey"
+    val client: Service[Request, Response] = Http.newService(baseURL)
+    val request: Request = Request(Method.Get, endpoint)
+    client(request).map(_.contentString)
+  }
 
-  def validateIngredient(r: Response[String]): Boolean = parse(r.unsafeBody)
-    .getOrElse(Json.Null)
+  def parseJSON(s: String): HCursor = parse(s)
+    .getOrElse(throw new Exception("couldn't parse json"))
     .hcursor
+
+  def validateIngredient(r: String): Boolean = parseJSON(r)
     .get[List[String]]("parsed") match {
       case Right(x) => x.nonEmpty
       case Left(_) => false
     }
 
-  val url = "https://www.allrecipes.com/recipe/9027/kung-pao-chicken/"
-  val doc = Jsoup.connect(url).timeout(10000).get()
-  // begin hard coding stuff to remove
-  doc.select("[ng-cloak]").remove()
-  // end hard coding stuff to remove
+//  val url = "https://www.allrecipes.com/recipe/9027/kung-pao-chicken/"
 
-  val unorderedLists: List[List[String]] = doc
-    .getElementsByTag("ul")
-    .asScala.toList
-    .map(stringify)
+  def parseUL(url: String): Future[List[Ingredient]] = {
 
-  val ingredients: Future[String] = for {
-    response <- callParser(unorderedLists)
-    jsonString = response.unsafeBody
-    (normalIngredients, sketchyIngredients) = decode[ParserResponse](jsonString)
-      .getOrElse(throw new Exception("couldn't decode")).result // take right side of either
-      .filter(isIngredientList) // take out most things that aren't ingredients
-      .flatten // combine to one list of ingredients
-      .partition { // separate between sketchy and normal ingredients
-      case Ingredient(_, None, None) => false
-      case _ => true
-    }
-    validatedIngredients <- sketchyIngredients.traverse(callValidator) map { _
-      .map(validateIngredient) // make api call to validate
-      .zip(sketchyIngredients)
-      .filter { case (bool, _) => bool } // filter out ones that are invalid
-      .map { case (_, value) => value }
-    }
-  } yield (normalIngredients ::: validatedIngredients).asJson.toString
+    val doc = Jsoup.connect(url).timeout(10000).get()
+    // begin hard coding stuff to remove
+    doc.select("[ng-cloak]").remove()
+    // end hard coding stuff to remove
 
-  ingredients.asTwitter
+    val unorderedLists: List[List[String]] = doc
+      .getElementsByTag("ul")
+      .asScala.toList
+      .map(stringify)
+
+    for {
+      response <- callParser(unorderedLists)
+      (normalIngredients: List[Ingredient], sketchyIngredients: List[Ingredient]) = parseJSON(response)
+        .get[List[List[Ingredient]]]("result")
+        .getOrElse(throw new Exception("couldn't decode")) // take right side of either
+        .filter(isIngredientList) // take out most things that aren't ingredients
+        .flatten // combine to one list of ingredients
+        .partition { // separate between sketchy and normal ingredients
+        case Ingredient(_, None, None) => false
+        case _ => true
+      }
+      validatedIngredients: List[Ingredient] <- Future.collect(sketchyIngredients.map(callValidator)) map { _
+        .map(validateIngredient) // make api call to validate
+        .zip(sketchyIngredients)
+        .filter { case (bool, _) => bool } // filter out ones that are invalid
+        .map { case (_, value) => value }
+        .toList
+      }
+    } yield normalIngredients ::: validatedIngredients
+
+  }
+
+  val parseEndpoint: Endpoint[List[Ingredient]] = get("parse" :: path[String]) { url: String =>
+    parseUL(url).map(Ok)
+  }
+
+  val service = parseEndpoint.toServiceAs[Application.Json]
+
+  Await.ready(Http.server.serve(":8081", service))
 
 }
 

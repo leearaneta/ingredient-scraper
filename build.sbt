@@ -7,11 +7,11 @@ scalaVersion := "2.12.4"
 scalacOptions += "-Ypartial-unification"
 
 libraryDependencies ++= Seq(
-  "org.typelevel" %% "cats-core" % "1.0.0",
   "org.jsoup" % "jsoup" % "1.8.3",
-  "com.softwaremill.sttp" %% "core" % "1.1.4",
-  "com.softwaremill.sttp" %% "async-http-client-backend-future" % "1.1.4",
-  "com.twitter" %% "util-collection" % "18.3.0"
+  "com.twitter" %% "util-collection" % "18.3.0",
+  "com.twitter" %% "finagle-http" % "18.3.0",
+  "com.github.finagle" %% "finch-core" % "0.17.0",
+  "com.github.finagle" %% "finch-circe" % "0.17.0"
 )
 
 val circeVersion = "0.9.1"
