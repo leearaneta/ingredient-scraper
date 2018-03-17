@@ -19,6 +19,7 @@ import io.finch.circe._
 
 case class Ingredient(name: Option[String], unit: Option[String], qty: Option[String])
 case class ParserPayload(method: String, params: List[List[String]], jsonrpc: String = "2.0", id: Int = 0)
+case class URL(name: String)
 
 object Main extends App {
 
@@ -82,7 +83,7 @@ object Main extends App {
     for {
       response <- callParser(unorderedLists)
       (normalIngredients: List[Ingredient], sketchyIngredients: List[Ingredient]) = parseJSON(response)
-        .get[List[List[Ingredient]]]("result")
+        .get[List[List[Ingredient]]]("result") // convert json to ingredient list
         .getOrElse(throw new Exception("couldn't decode")) // take right side of either
         .filter(isIngredientList) // take out most things that aren't ingredients
         .flatten // combine to one list of ingredients
@@ -101,8 +102,8 @@ object Main extends App {
 
   }
 
-  val parseEndpoint: Endpoint[List[Ingredient]] = get("parse" :: path[String]) { url: String =>
-    parseUL(url).map(Ok)
+  val parseEndpoint: Endpoint[List[Ingredient]] = post("parse" :: jsonBody[URL]) { u: URL =>
+    parseUL(u.name).map(Ok)
   }
 
   val service = parseEndpoint.toServiceAs[Application.Json]
