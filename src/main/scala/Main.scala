@@ -1,23 +1,21 @@
 import AppConfig._
+import com.twitter.finagle.builder.ClientBuilder
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
-
 import com.twitter.finagle.{Http, Service}
-import com.twitter.finagle.http.{Request, Response, Method}
+import com.twitter.finagle.http.{Method, Request, RequestBuilder, Response}
 import com.twitter.util.{Await, Future}
 
 import scala.collection.JavaConverters._
-
 import io.circe._
 import io.circe.parser._
 import io.circe.syntax._
 import io.circe.generic.semiauto._
-
 import io.finch._
 import io.finch.syntax._
 import io.finch.circe._
 
-case class Ingredient(name: Option[String], unit: Option[String], qty: Option[String])
+case class Ingredient(name: String, unit: Option[String], qty: Option[String])
 case class ParserPayload(method: String, params: List[List[String]], jsonrpc: String = "2.0", id: Int = 0)
 case class URL(name: String)
 
@@ -26,6 +24,7 @@ object Main extends App {
   implicit val encodePayload: Encoder[ParserPayload] = deriveEncoder
   implicit val encodeIngredient: Encoder[Ingredient] = deriveEncoder
   implicit val decodeIngredient: Decoder[Ingredient] = Decoder.forProduct3("name", "unit", "qty")(Ingredient.apply)
+  implicit val decodeURL: Decoder[URL] = deriveDecoder
 
   def stringify(ul: Element): List[String] = ul
     .getElementsByTag("li")
@@ -49,10 +48,14 @@ object Main extends App {
 
   def callValidator(i: Ingredient): Future[String] = {
     // eventually use word2vec for this
-    val baseURL = "https://api.edamam.com/api"
-    val endpoint = s"food-database/parser?ingr=${i.name}&app_id=$appID&app_key=$appKey"
-    val client: Service[Request, Response] = Http.newService(baseURL)
-    val request: Request = Request(Method.Get, endpoint)
+    val client: Service[Request, Response] = ClientBuilder()
+      .stack(Http.client)
+      .hosts("api.edamam.com:443")
+      .tls("api.edamam.com") // for https requests
+      .build()
+    val request = RequestBuilder()
+      .url(s"https://api.edamam.com/api/food-database/parser?ingr=${java.net.URLEncoder.encode(i.name, "UTF-8")}&app_id=$appID&app_key=$appKey")
+      .buildGet()
     client(request).map(_.contentString)
   }
 
@@ -88,9 +91,9 @@ object Main extends App {
         .filter(isIngredientList) // take out most things that aren't ingredients
         .flatten // combine to one list of ingredients
         .partition { // separate between sketchy and normal ingredients
-        case Ingredient(_, None, None) => false
-        case _ => true
-      }
+          case Ingredient(_, None, None) => false
+          case _ => true
+        }
       validatedIngredients: List[Ingredient] <- Future.collect(sketchyIngredients.map(callValidator)) map { _
         .map(validateIngredient) // make api call to validate
         .zip(sketchyIngredients)
