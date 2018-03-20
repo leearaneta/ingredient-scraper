@@ -8,7 +8,7 @@ import com.twitter.io.Buf
 import com.twitter.util.{Await, Future}
 
 import scala.collection.JavaConverters._
-import io.circe._
+import io.circe.{Error, _}
 import io.circe.parser._
 import io.circe.syntax._
 import io.circe.generic.semiauto._
@@ -33,6 +33,7 @@ object Main extends App {
     .asScala.toList
     .map(_.text)
 
+  // refactor parser and validator into helper functions
   def callParser(l: List[List[String]]): Future[String] = {
     val jsonString: String = ParserPayload("parse_all", l).asJson.toString
     val client: Service[Request, Response] = ClientBuilder()
@@ -65,14 +66,16 @@ object Main extends App {
       case _ => false
     } / l.length.toFloat > .5 // some arbitrary number
 
+  // maybe have a better way of handling errors, but for now just throw an exception
+  def decodeJSON[A](s: String)(jsonDecoder: Json => Either[Error, A]): A = {
+    val decoded: Either[Error, A] = for {
+      json: Json <- parse(s)
+      decoded: A <- jsonDecoder(json)
+    } yield decoded
+    decoded.getOrElse(throw new Exception("couldn't decode json"))
+  }
 
-  // maybe have a better way of handling errors, but for now just throw exceptions
-  def parseJSON(s: String): Json = parse(s).getOrElse(throw new Exception("couldn't parse json"))
-
-  def decodeJSON[A](s: String)(jsonDecoder: Json => DecodeResult[A]): A =
-    (parseJSON _ andThen jsonDecoder)(s).getOrElse(throw new Exception("couldn't decode json"))
-
-  def validate(j: Json): DecodeResult[Boolean] = j
+  def validate(j: Json): Either[Error, Boolean] = j
     .hcursor
     .get[List[String]]("parsed")
     .map(_.nonEmpty)
