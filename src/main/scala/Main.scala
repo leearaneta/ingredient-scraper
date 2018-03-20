@@ -104,7 +104,7 @@ object Main extends App {
 
     for {
       response <- EitherT.right(callParser(unorderedLists))
-      allIngredients = decodeJSON(response) { _.hcursor.get[List[List[Ingredient]]]("result")}
+      allIngredients <- EitherT(Future {decodeJSON(response) { _.hcursor.get[List[List[Ingredient]]]("result")} })
       (normalIngredients, sketchyIngredients) = split(allIngredients)
       validatedIngredients: List[Ingredient] <- Future.collect(sketchyIngredients.map(callValidator)) map { _
         .map(decodeJSON(_)(validate)) // make api call to validate
