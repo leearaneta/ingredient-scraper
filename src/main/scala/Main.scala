@@ -1,8 +1,10 @@
 import AppConfig._
-import com.twitter.finagle.builder.ClientBuilder
+import cats.data.EitherT
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
+
 import com.twitter.finagle.{Http, Service}
+import com.twitter.finagle.builder.ClientBuilder
 import com.twitter.finagle.http.{Request, RequestBuilder, Response}
 import com.twitter.io.Buf
 import com.twitter.util.{Await, Future}
@@ -26,7 +28,8 @@ object Main extends App {
   implicit val encodeIngredient: Encoder[Ingredient] = deriveEncoder
   implicit val decodeIngredient: Decoder[Ingredient] = Decoder.forProduct3("name", "unit", "qty")(Ingredient.apply)
   implicit val decodeURL: Decoder[URL] = deriveDecoder
-  type DecodeResult[A] = Decoder.Result[A]
+  type DecodeResult[A] = Either[Error, A]
+  type FutureEither[A] = EitherT[Future, Error, A]
 
   def stringify(ul: Element): List[String] = ul
     .getElementsByTag("li")
@@ -67,13 +70,10 @@ object Main extends App {
     } / l.length.toFloat > .5 // some arbitrary number
 
   // maybe have a better way of handling errors, but for now just throw an exception
-  def decodeJSON[A](s: String)(jsonDecoder: Json => Either[Error, A]): A = {
-    val decoded: Either[Error, A] = for {
+  def decodeJSON[A](s: String)(jsonDecoder: Json => DecodeResult[A]): DecodeResult[A] = for {
       json: Json <- parse(s)
       decoded: A <- jsonDecoder(json)
     } yield decoded
-    decoded.getOrElse(throw new Exception("couldn't decode json"))
-  }
 
   def validate(j: Json): Either[Error, Boolean] = j
     .hcursor
@@ -103,7 +103,7 @@ object Main extends App {
       .map(stringify)
 
     for {
-      response <- callParser(unorderedLists)
+      response <- EitherT.right(callParser(unorderedLists))
       allIngredients = decodeJSON(response) { _.hcursor.get[List[List[Ingredient]]]("result")}
       (normalIngredients, sketchyIngredients) = split(allIngredients)
       validatedIngredients: List[Ingredient] <- Future.collect(sketchyIngredients.map(callValidator)) map { _
