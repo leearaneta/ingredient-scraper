@@ -106,8 +106,9 @@ object Main extends App {
       response: String <- callParser(unorderedLists)
       allIngredients: List[List[Ingredient]] = decodeJSON(response) { _.hcursor.get[List[List[Ingredient]]]("result")}
       (normalIngredients: List[Ingredient], sketchyIngredients: List[Ingredient]) = split(allIngredients)
-      validationJSON: List[String] <- Future.collect(sketchyIngredients.map(callValidator)) // make api call to validate
+      validationJSON: Seq[String] <- Future.collect(sketchyIngredients.map(callValidator)) // make api call to validate
       validatedIngredients: List[Ingredient] = validationJSON.map(decodeJSON(_)(validate))
+        .toList
         .zip(sketchyIngredients) // zip sketchy ingredients with boolean values
         .filter { case (bool, _) => bool } // filter out ones that are invalid
         .map { case (_, value) => value }
