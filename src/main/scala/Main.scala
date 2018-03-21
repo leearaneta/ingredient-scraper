@@ -1,8 +1,4 @@
 import AppConfig._
-import cats.{Functor, Monad}
-import cats.data.EitherT
-import cats.instances.list._
-import cats.syntax.traverse._
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 
@@ -26,15 +22,6 @@ case class ParserPayload(method: String, params: List[List[String]], jsonrpc: St
 case class URL(name: String)
 
 object Main extends App {
-
-  implicit val futureFunctor: Functor[Future] = new Functor[Future] {
-    def map[A, B](fa: Future[A])(f: A => B): Future[B] = fa map f
-  }
-
-  implicit val futureMonad: Monad[Future] = new Monad[Future] {
-    def flatMap[A, B](fa: Future[A])(f: A => Future[B]): Future[B] = fa.flatMap(f)
-    def pure[A](a: A): Future[A] = Future.value(a)
-  }
 
   implicit val encodePayload: Encoder[ParserPayload] = deriveEncoder
   implicit val encodeIngredient: Encoder[Ingredient] = deriveEncoder
@@ -80,10 +67,13 @@ object Main extends App {
     } / l.length.toFloat > .5 // some arbitrary number
 
   // maybe have a better way of handling errors, but for now just throw an exception
-  def decodeJSON[A](s: String)(jsonDecoder: Json => Either[Error, A]): Either[Error, A] = for {
+  def decodeJSON[A](s: String)(jsonDecoder: Json => Either[Error, A]): A = {
+    val decoded: Either[Error, A] = for {
       json <- parse(s)
       decoded <- jsonDecoder(json)
     } yield decoded
+    decoded.getOrElse(throw new Exception("couldn't decode"))
+  }
 
   def validate(j: Json): Either[Error, Boolean] = j
     .hcursor
@@ -100,7 +90,7 @@ object Main extends App {
 
 //  val url = "https://www.allrecipes.com/recipe/9027/kung-pao-chicken/"
 
-  def parseUL(url: String): EitherT[Future, Error, List[Ingredient]] = {
+  def parseUL(url: String): Future[List[Ingredient]] = {
 
     val doc = Jsoup.connect(url).timeout(10000).get()
     // begin hard coding stuff to remove
@@ -113,12 +103,11 @@ object Main extends App {
       .map(stringify)
 
     for {
-      response <- EitherT.right(callParser(unorderedLists))
-      allIngredients <- EitherT(Future {decodeJSON(response) { _.hcursor.get[List[List[Ingredient]]]("result")} })
+      response: String <- callParser(unorderedLists)
+      allIngredients: List[List[Ingredient]] = decodeJSON(response) { _.hcursor.get[List[List[Ingredient]]]("result")}
       (normalIngredients: List[Ingredient], sketchyIngredients: List[Ingredient]) = split(allIngredients)
-      validationJSON: List[String] <- EitherT.right(Future.collect(sketchyIngredients.map(callValidator))) // make api call to validate
-      validation: List[Boolean] <- EitherT(Future {validationJSON.traverse(decodeJSON(_)(validate)) })
-      validatedIngredients: List[Ingredient] = validation
+      validationJSON: List[String] <- Future.collect(sketchyIngredients.map(callValidator)) // make api call to validate
+      validatedIngredients: List[Ingredient] = validationJSON.map(decodeJSON(_)(validate))
         .zip(sketchyIngredients) // zip sketchy ingredients with boolean values
         .filter { case (bool, _) => bool } // filter out ones that are invalid
         .map { case (_, value) => value }
@@ -126,11 +115,7 @@ object Main extends App {
 
   }
 
-  val parseEndpoint: Endpoint[List[Ingredient]] = post("parse" :: jsonBody[URL]) { u: URL => parseUL(u.name)
-    .value
-    .map(e => e.getOrElse(throw new Exception("server error !!"))) // incorporate error handling with finch
-    .map(Ok)
-  }
+  val parseEndpoint: Endpoint[List[Ingredient]] = post("parse" :: jsonBody[URL]) { u: URL => parseUL(u.name).map(Ok) }
   val service = parseEndpoint.toServiceAs[Application.Json]
 
   Await.ready(Http.server.serve(":8081", service))
