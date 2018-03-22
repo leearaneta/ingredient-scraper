@@ -1,8 +1,12 @@
 import AppConfig._
 import futureconvert._
+
 import cats.data.EitherT
 import cats.instances.list._
+import cats.instances.either._
+import cats.instances.future._
 import cats.syntax.traverse._
+
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 
@@ -10,6 +14,7 @@ import com.twitter.finagle.{Http, Service}
 import com.twitter.finagle.builder.ClientBuilder
 import com.twitter.finagle.http.{Request, RequestBuilder, Response}
 import com.twitter.io.Buf
+
 import scala.collection.JavaConverters._
 import io.circe.{Error, _}
 import io.circe.parser._
@@ -19,7 +24,7 @@ import io.finch._
 import io.finch.syntax._
 import io.finch.circe._
 
-import scala.concurrent.Future
+import scala.concurrent.{ExecutionContext, ExecutionContextExecutor, Future}
 import com.twitter.util.Await
 
 case class Ingredient(name: String, unit: Option[String], qty: Option[String])
@@ -28,6 +33,7 @@ case class URL(name: String)
 
 object Main extends App {
 
+  implicit val ec: ExecutionContextExecutor = ExecutionContext.global
   implicit val encodePayload: Encoder[ParserPayload] = deriveEncoder
   implicit val encodeIngredient: Encoder[Ingredient] = deriveEncoder
   implicit val decodeIngredient: Decoder[Ingredient] = Decoder.forProduct3("name", "unit", "qty")(Ingredient.apply)
@@ -108,8 +114,8 @@ object Main extends App {
       response <- EitherT.right(callParser(unorderedLists))
       allIngredients <- EitherT(Future {decodeJSON(response) { _.hcursor.get[List[List[Ingredient]]]("result")} })
       (normalIngredients: List[Ingredient], sketchyIngredients: List[Ingredient]) = split(allIngredients)
-      validationJSON: List[String] <- EitherT.right(sketchyIngredients.traverse(callValidator)) // make api call to validate
-      validation: List[Boolean] <- EitherT(Future {validationJSON.traverse(decodeJSON(_)(validate)) })
+      validationJSON <- EitherT.right(sketchyIngredients.traverse(callValidator)) // make api call to validate
+      validation <- EitherT(Future {validationJSON.traverse(decodeJSON(_)(validate)) })
       validatedIngredients: List[Ingredient] = validation
         .zip(sketchyIngredients) // zip sketchy ingredients with boolean values
         .filter { case (bool, _) => bool } // filter out ones that are invalid
@@ -119,7 +125,7 @@ object Main extends App {
   }
 
   val parseEndpoint: Endpoint[List[Ingredient]] = post("parse" :: jsonBody[URL]) { u: URL => parseUL(u.name)
-    .value
+    .value.asTwitter
     .map(e => e.getOrElse(throw new Exception("server error !!"))) // incorporate error handling with finch
     .map(Ok)
   }
