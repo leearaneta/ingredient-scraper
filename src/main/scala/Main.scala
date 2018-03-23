@@ -41,7 +41,7 @@ object Main extends App {
       .hosts("localhost:4000")
       .build()
     val request: Request = RequestBuilder()
-      .url("localhost:4000/jsonrpc")
+      .url("http://localhost:4000/jsonrpc")
       .buildPost(Buf.Utf8(jsonString))
     client(request).map(_.contentString)
   }
