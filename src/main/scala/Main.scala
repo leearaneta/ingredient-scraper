@@ -2,6 +2,7 @@ import AppConfig._
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
 
+import com.twitter.finagle.http.filter.Cors
 import com.twitter.finagle.{Http, Service}
 import com.twitter.finagle.builder.ClientBuilder
 import com.twitter.finagle.http.{Request, RequestBuilder, Response}
@@ -18,6 +19,7 @@ import io.finch.syntax._
 import io.finch.circe._
 
 case class Ingredient(name: String, unit: Option[String], qty: Option[String])
+case class Recipe(name: String, ingredients: List[Ingredient])
 case class ParserPayload(method: String, params: List[List[String]], jsonrpc: String = "2.0", id: Int = 0)
 case class URL(name: String)
 
@@ -25,6 +27,7 @@ object Main extends App {
 
   implicit val encodePayload: Encoder[ParserPayload] = deriveEncoder
   implicit val encodeIngredient: Encoder[Ingredient] = deriveEncoder
+  implicit val encodeRecipe: Encoder[Recipe] = deriveEncoder
   implicit val decodeIngredient: Decoder[Ingredient] = Decoder.forProduct3("name", "unit", "qty")(Ingredient.apply)
   implicit val decodeURL: Decoder[URL] = deriveDecoder
 
@@ -90,7 +93,7 @@ object Main extends App {
 
 //  val url = "https://www.allrecipes.com/recipe/9027/kung-pao-chicken/"
 
-  def parseUL(url: String): Future[List[Ingredient]] = {
+  def parseUL(url: String): Future[Recipe] = { // TODO: separate managing document into separate function
 
     val doc = Jsoup.connect(url).timeout(10000).get()
     // begin hard coding stuff to remove
@@ -112,14 +115,22 @@ object Main extends App {
         .zip(sketchyIngredients) // zip sketchy ingredients with boolean values
         .filter { case (bool, _) => bool } // filter out ones that are invalid
         .map { case (_, value) => value }
-    } yield normalIngredients ::: validatedIngredients
+      ingredients = normalIngredients ::: validatedIngredients
+    } yield Recipe(doc.title, ingredients)
 
   }
 
-  val parseEndpoint: Endpoint[List[Ingredient]] = post("parse" :: jsonBody[URL]) { u: URL => parseUL(u.name).map(Ok) }
+  val parseEndpoint: Endpoint[Recipe] = post("parse" :: jsonBody[URL]) { u: URL => parseUL(u.name).map(Ok) }
   val service = parseEndpoint.toServiceAs[Application.Json]
 
-  Await.ready(Http.server.serve(":8081", service))
+  val policy: Cors.Policy = Cors.Policy(
+    allowsOrigin = _ => Some("*"),
+    allowsMethods = _ => Some(Seq("GET", "POST")),
+    allowsHeaders = _ => Some(Seq("Content-Type"))
+  )
+
+  val corsService: Service[Request, Response] = new Cors.HttpFilter(policy).andThen(service)
+  Await.ready(Http.server.serve(":8081", corsService))
 
 }
 
