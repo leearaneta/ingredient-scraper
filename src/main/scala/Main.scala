@@ -18,6 +18,8 @@ import io.finch._
 import io.finch.syntax._
 import io.finch.circe._
 
+import com.hypertino.inflector.English
+
 case class Ingredient(name: String, unit: Option[String], qty: Option[String])
 case class Recipe(name: String, ingredients: List[Ingredient])
 case class ParserPayload(method: String, params: List[List[String]], jsonrpc: String = "2.0", id: Int = 0)
@@ -93,7 +95,7 @@ object Main extends App {
 
 //  val url = "https://www.allrecipes.com/recipe/9027/kung-pao-chicken/"
 
-  def parseUL(url: String): Future[Recipe] = { // TODO: separate managing document into separate function
+  def parseUL(url: String): Future[Recipe] = { // TODO: divorce managing document from parsing list[list[string]
 
     val doc = Jsoup.connect(url).timeout(10000).get()
     // begin hard coding stuff to remove
@@ -116,7 +118,8 @@ object Main extends App {
         .filter { case (bool, _) => bool } // filter out ones that are invalid
         .map { case (_, value) => value }
       ingredients = normalIngredients ::: validatedIngredients
-    } yield Recipe(doc.title, ingredients)
+      formattedIngredients = ingredients.map(i => i.copy(name = English.singular(i.name)))
+    } yield Recipe(doc.title, formattedIngredients)
 
   }
 

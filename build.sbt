@@ -12,7 +12,8 @@ libraryDependencies ++= Seq(
   "com.twitter" %% "util-collection" % "18.3.0",
   "com.twitter" %% "finagle-http" % "18.3.0",
   "com.github.finagle" %% "finch-core" % "0.17.0",
-  "com.github.finagle" %% "finch-circe" % "0.17.0"
+  "com.github.finagle" %% "finch-circe" % "0.17.0",
+  "com.hypertino" %% "inflector" % "1.0.1"
 )
 
 val circeVersion = "0.9.1"
