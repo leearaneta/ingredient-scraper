@@ -1,6 +1,6 @@
 import AppConfig._
 import org.jsoup.Jsoup
-import org.jsoup.nodes.Element
+import org.jsoup.nodes.{Document, Element}
 
 import com.twitter.finagle.http.filter.Cors
 import com.twitter.finagle.{Http, Service}
@@ -10,6 +10,8 @@ import com.twitter.io.Buf
 import com.twitter.util.{Await, Future}
 
 import scala.collection.JavaConverters._
+import java.net.URLEncoder
+
 import io.circe.{Error, _}
 import io.circe.parser._
 import io.circe.syntax._
@@ -17,7 +19,6 @@ import io.circe.generic.semiauto._
 import io.finch._
 import io.finch.syntax._
 import io.finch.circe._
-
 import com.hypertino.inflector.English
 
 case class Ingredient(name: String, unit: Option[String], qty: Option[String])
@@ -33,10 +34,34 @@ object Main extends App {
   implicit val decodeIngredient: Decoder[Ingredient] = Decoder.forProduct3("name", "unit", "qty")(Ingredient.apply)
   implicit val decodeURL: Decoder[URL] = deriveDecoder
 
-  def stringify(ul: Element): List[String] = ul
-    .getElementsByTag("li")
+  def getDocument(u: String): Document = { // TODO: optimize this function based on URL (maybe use selenium)
+    val doc = Jsoup.connect(u).timeout(10000).get
+    doc.select("[ng-cloak]").remove()
+    doc
+  }
+
+  def getChildrenText(e: Element): List[String] = e
+    .children
     .asScala.toList
     .map(_.text)
+
+  def suspectList(e: Element): Boolean =
+    if (e.children.size < 3) false
+    else e.children.asScala.toList
+      .map { child => (child.tagName, child.className) }
+      .groupBy(identity).mapValues(_.size).values
+      .max >= e.children.size / 2.toFloat
+
+  def getUnorderedLists(d: Document): List[List[String]] = d
+    .getElementsByTag("ul")
+    .asScala.toList
+    .map(getChildrenText)
+
+  def inferLists(d: Document): List[List[String]] = d
+    .getAllElements
+    .asScala.toList
+    .filter(suspectList)
+    .map(getChildrenText)
 
   // refactor parser and validator into helper functions
   def callParser(l: List[List[String]]): Future[String] = {
@@ -58,8 +83,9 @@ object Main extends App {
       .hosts("api.edamam.com:443")
       .tls("api.edamam.com") // for https requests
       .build()
+    val paramString = s"ingr=${URLEncoder.encode(i.name, "UTF-8")}&app_id=$appID&app_key=$appKey"
     val request = RequestBuilder()
-      .url(s"https://api.edamam.com/api/food-database/parser?ingr=${java.net.URLEncoder.encode(i.name, "UTF-8")}&app_id=$appID&app_key=$appKey")
+      .url(s"https://api.edamam.com/api/food-database/parser?" + paramString)
       .buildGet()
     client(request).map(_.contentString)
   }
@@ -93,37 +119,37 @@ object Main extends App {
       case _ => true
     }
 
-//  val url = "https://www.allrecipes.com/recipe/9027/kung-pao-chicken/"
+  def foodifyText(l: List[List[String]]): Future[List[Ingredient]] = for {
+    response: String <- callParser(l)
+    allIngredients: List[List[Ingredient]] = decodeJSON(response) { _.hcursor.get[List[List[Ingredient]]]("result")}
+    (normalIngredients: List[Ingredient], sketchyIngredients: List[Ingredient]) = split(allIngredients)
+    validationJSON: Seq[String] <- Future.collect(sketchyIngredients.map(callValidator)) // make api call to validate
+    validatedIngredients: List[Ingredient] = validationJSON.map(decodeJSON(_)(validate))
+      .toList
+      .zip(sketchyIngredients) // zip sketchy ingredients with boolean values
+      .filter { case (bool, _) => bool } // filter out ones that are invalid
+      .map { case (_, value) => value }
+    ingredients = normalIngredients ::: validatedIngredients
+    if ingredients.nonEmpty
+  } yield ingredients
 
-  def parseUL(url: String): Future[Recipe] = { // TODO: divorce managing document from parsing list[list[string]
+  def foodifyHTML(f: Document => List[List[String]]) = f _ andThen foodifyText
 
-    val doc = Jsoup.connect(url).timeout(10000).get()
-    // begin hard coding stuff to remove
-    doc.select("[ng-cloak]").remove()
-    // end hard coding stuff to remove
-
-    val unorderedLists: List[List[String]] = doc
-      .getElementsByTag("ul")
-      .asScala.toList
-      .map(stringify)
-
-    for {
-      response: String <- callParser(unorderedLists)
-      allIngredients: List[List[Ingredient]] = decodeJSON(response) { _.hcursor.get[List[List[Ingredient]]]("result")}
-      (normalIngredients: List[Ingredient], sketchyIngredients: List[Ingredient]) = split(allIngredients)
-      validationJSON: Seq[String] <- Future.collect(sketchyIngredients.map(callValidator)) // make api call to validate
-      validatedIngredients: List[Ingredient] = validationJSON.map(decodeJSON(_)(validate))
-        .toList
-        .zip(sketchyIngredients) // zip sketchy ingredients with boolean values
-        .filter { case (bool, _) => bool } // filter out ones that are invalid
-        .map { case (_, value) => value }
-      ingredients = normalIngredients ::: validatedIngredients
-      formattedIngredients = ingredients.map(i => i.copy(name = English.singular(i.name)))
-    } yield Recipe(doc.title, formattedIngredients)
-
+  def foodify(d: Document): Future[List[Ingredient]] = foodifyHTML(getUnorderedLists)(d).rescue {
+    case _ => foodifyHTML(inferLists)(d)
   }
 
-  val parseEndpoint: Endpoint[Recipe] = post("parse" :: jsonBody[URL]) { u: URL => parseUL(u.name).map(Ok) }
+  def singularize(i: Ingredient) = i.copy(name = English.singular(i.name))
+
+  def execute(s: String): Future[Recipe] = {
+    val doc = getDocument(s)
+    for {
+      ingredients <- foodify(doc)
+      formattedIngredients = ingredients.map(singularize)
+    } yield Recipe(doc.title, formattedIngredients)
+  }
+
+  val parseEndpoint: Endpoint[Recipe] = post("parse" :: jsonBody[URL]) { u: URL => execute(u.name).map(Ok) }
   val service = parseEndpoint.toServiceAs[Application.Json]
 
   val policy: Cors.Policy = Cors.Policy(
@@ -136,12 +162,3 @@ object Main extends App {
   Await.ready(Http.server.serve(":8081", corsService))
 
 }
-
-//  def suspectList(e: Element): Boolean =
-//    if (e.children.size < 3) false
-//    else e.children.asScala.toList
-//      .map { child => (child.tagName, child.className) }
-//      .groupBy(identity).mapValues(_.size).values
-//      .max >= e.children.size / 2.toFloat
-
-// perform suspectList on ALL nodes
