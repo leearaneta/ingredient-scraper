@@ -12,7 +12,7 @@ import com.twitter.util.{Await, Future}
 import scala.collection.JavaConverters._
 import java.net.URLEncoder
 
-import io.circe.{Error, _}
+import io.circe._
 import io.circe.parser._
 import io.circe.syntax._
 import io.circe.generic.semiauto._
@@ -40,10 +40,16 @@ object Main extends App {
     doc
   }
 
+  def replaceAbbreviations(s: String): String =
+    abbreviations.foldLeft(s)((a, b) => a.replaceAllLiterally(b._1, b._2))
+
+  def formatText = ((s: String) => s.replace(".", "")) andThen replaceAbbreviations
+
   def getChildrenText(e: Element): List[String] = e
     .children
     .asScala.toList
     .map(_.text)
+    .map(formatText)
 
   def suspectList(e: Element): Boolean =
     if (e.children.size < 3) false
@@ -77,7 +83,6 @@ object Main extends App {
   }
 
   def callValidator(i: Ingredient): Future[String] = {
-    // eventually use word2vec for this
     val client: Service[Request, Response] = ClientBuilder()
       .stack(Http.client)
       .hosts("api.edamam.com:443")
@@ -95,20 +100,21 @@ object Main extends App {
     else l.count {
       case Ingredient(_, Some(_), Some(_)) => true
       case _ => false
-    } / l.length.toFloat > .5 // some arbitrary number
+    } / l.length.toFloat >= .35 // some arbitrary number
 
-  // maybe have a better way of handling errors, but for now just throw an exception
-  def decodeJSON[A](s: String)(jsonDecoder: Json => Either[Error, A]): A = {
-    val decoded: Either[Error, A] = for {
+  def decodeJSON[A](s: String)(jsonDecoder: Json => Either[io.circe.Error, A]): A = {
+    val decoded: Either[io.circe.Error, A] = for {
       json <- parse(s)
       decoded <- jsonDecoder(json)
     } yield decoded
     decoded.getOrElse(throw new Exception("couldn't decode"))
   }
 
-  def validate(j: Json): Either[Error, Boolean] = j
+  def validate(j: Json): Either[io.circe.Error, Boolean] = j
     .hcursor
-    .get[List[String]]("parsed")
+    .downField("parsed")
+    .values
+    .toRight(ParsingFailure("couldn't validate", throw new Exception()))
     .map(_.nonEmpty)
 
   def split(l: List[List[Ingredient]]): (List[Ingredient], List[Ingredient]) = l
@@ -133,7 +139,7 @@ object Main extends App {
     if ingredients.nonEmpty
   } yield ingredients
 
-  def foodifyHTML(f: Document => List[List[String]]) = f _ andThen foodifyText
+  def foodifyHTML(f: Document => List[List[String]]) = f andThen foodifyText
 
   def foodify(d: Document): Future[List[Ingredient]] = foodifyHTML(getUnorderedLists)(d).rescue {
     case _ => foodifyHTML(inferLists)(d)
