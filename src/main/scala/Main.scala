@@ -1,6 +1,9 @@
 import AppConfig._
 import org.jsoup.Jsoup
 import org.jsoup.nodes.{Document, Element}
+import org.openqa.selenium.{JavascriptExecutor, WebDriver, WebElement}
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.support.ui.WebDriverWait
 
 import com.twitter.finagle.http.filter.Cors
 import com.twitter.finagle.{Http, Service}
@@ -19,6 +22,7 @@ import io.circe.generic.semiauto._
 import io.finch._
 import io.finch.syntax._
 import io.finch.circe._
+
 import com.hypertino.inflector.English
 
 case class Ingredient(name: String, unit: Option[String], qty: Option[String])
@@ -35,11 +39,21 @@ object Main extends App {
   implicit val decodeURL: Decoder[URL] = deriveDecoder
 
   def getDocument(u: String): Document = { // TODO: optimize this function based on URL (maybe use selenium)
-    // new WebDriverWait(firefoxDriver, pageLoadTimeout).until(
-      // webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
     val doc = Jsoup.connect(u).timeout(10000).get
     doc.select("[ng-cloak]").remove()
     doc
+  }
+
+  def waitUntilLoaded(u: String): Document = {
+    val driver = new ChromeDriver()
+    driver.get(u)
+    driver.asInstanceOf[JavascriptExecutor].executeScript("window.scrollBy(0, 2500)")
+    new WebDriverWait(driver, 15).until { d: WebDriver => d
+      .asInstanceOf[JavascriptExecutor]
+      .executeScript("return document.readyState")
+      .equals("complete")
+    }
+    Jsoup.parse(driver.getPageSource)
   }
 
   def replaceAbbreviations(s: String): String =
