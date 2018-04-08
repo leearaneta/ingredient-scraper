@@ -38,23 +38,37 @@ object Main extends App {
   implicit val decodeIngredient: Decoder[Ingredient] = Decoder.forProduct3("name", "unit", "qty")(Ingredient.apply)
   implicit val decodeURL: Decoder[URL] = deriveDecoder
 
-  def getDocument(u: String): Document = { // TODO: optimize this function based on URL (maybe use selenium)
-    val doc = Jsoup.connect(u).timeout(10000).get
-    doc.select("[ng-cloak]").remove()
-    doc
-  }
+  def loadHTMLWithJsoup(u: String): Document = Jsoup.connect(u).timeout(10000).get
+  // doc.select("[ng-cloak]").remove()
 
-  def waitUntilLoaded(u: String): Document = {
-    val driver = new ChromeDriver()
-    driver.get(u)
-    driver.asInstanceOf[JavascriptExecutor].executeScript("window.scrollBy(0, 2500)")
-    new WebDriverWait(driver, 15).until { d: WebDriver => d
+  def waitUntilLoaded(d: WebDriver): Boolean =
+    new WebDriverWait(d, 15).until { d: WebDriver => d
       .asInstanceOf[JavascriptExecutor]
       .executeScript("return document.readyState")
       .equals("complete")
     }
+
+  // TODO: come up with interface to execute javascript from driver based on domain
+  def loadHTMLWithSelenium(u: String): Document = {
+    val driver = new ChromeDriver()
+    driver.get(u)
+    driver.asInstanceOf[JavascriptExecutor].executeScript("window.scrollBy(0, 2500)")
+    val loaded = waitUntilLoaded(driver) // maybe use this in a while loop?
     Jsoup.parse(driver.getPageSource)
   }
+
+  def loadHTML(u: String): Document = seleniumDomains.find(d => u contains d) match {
+    case Some(_) => loadHTMLWithSelenium(u)
+    case None => loadHTMLWithJsoup(u)
+  }
+
+  // TODO: clean HTML based on domain
+  def cleanHTML(doc: Document): Document = {
+    doc.select("[ng-cloak]").remove()
+    doc
+  }
+
+  def prepareHTML: String => Document = loadHTML _ andThen cleanHTML
 
   def replaceAbbreviations(s: String): String =
     abbreviations.foldLeft(s)((a, b) => a.replaceAllLiterally(b._1, b._2))
@@ -167,13 +181,14 @@ object Main extends App {
   def formatName = singularize _ andThen dedupe
   def formatIngredient(i: Ingredient) = i.copy(name = formatName(i.name))
 
-  def execute(s: String): Future[Recipe] = {
-    val doc = getDocument(s)
+  def getRecipeFromHTML(d: Document): Future[Recipe] = {
     for {
-      ingredients <- foodify(doc)
+      ingredients <- foodify(d)
       formattedIngredients = ingredients.map(formatIngredient)
-    } yield Recipe(doc.title, formattedIngredients)
+    } yield Recipe(d.title, formattedIngredients)
   }
+
+  def execute: String => Future[Recipe] = prepareHTML andThen getRecipeFromHTML
 
   val parseEndpoint: Endpoint[Recipe] = post("parse" :: jsonBody[URL]) { u: URL => execute(u.address).map(Ok) }
   val service = parseEndpoint.toServiceAs[Application.Json]
