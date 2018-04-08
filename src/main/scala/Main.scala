@@ -24,7 +24,7 @@ import com.hypertino.inflector.English
 case class Ingredient(name: String, unit: Option[String], qty: Option[String])
 case class Recipe(name: String, ingredients: List[Ingredient])
 case class ParserPayload(method: String, params: List[List[String]], jsonrpc: String = "2.0", id: Int = 0)
-case class URL(name: String)
+case class URL(address: String)
 
 object Main extends App {
 
@@ -35,6 +35,8 @@ object Main extends App {
   implicit val decodeURL: Decoder[URL] = deriveDecoder
 
   def getDocument(u: String): Document = { // TODO: optimize this function based on URL (maybe use selenium)
+    // new WebDriverWait(firefoxDriver, pageLoadTimeout).until(
+      // webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
     val doc = Jsoup.connect(u).timeout(10000).get
     doc.select("[ng-cloak]").remove()
     doc
@@ -100,7 +102,7 @@ object Main extends App {
     else l.count {
       case Ingredient(_, Some(_), Some(_)) => true
       case _ => false
-    } / l.length.toFloat >= .35 // some arbitrary number
+    } / l.length.toFloat >= .42 // some arbitrary number
 
   def decodeJSON[A](s: String)(jsonDecoder: Json => Either[io.circe.Error, A]): A = {
     val decoded: Either[io.circe.Error, A] = for {
@@ -145,17 +147,21 @@ object Main extends App {
     case _ => foodifyHTML(inferLists)(d)
   }
 
-  def singularize(i: Ingredient) = i.copy(name = English.singular(i.name))
+  def singularize(s: String): String = English.singular(s)
+  def dedupe(s: String): String = s.split(" ").distinct.mkString(" ")
+
+  def formatName = singularize _ andThen dedupe
+  def formatIngredient(i: Ingredient) = i.copy(name = formatName(i.name))
 
   def execute(s: String): Future[Recipe] = {
     val doc = getDocument(s)
     for {
       ingredients <- foodify(doc)
-      formattedIngredients = ingredients.map(singularize)
+      formattedIngredients = ingredients.map(formatIngredient)
     } yield Recipe(doc.title, formattedIngredients)
   }
 
-  val parseEndpoint: Endpoint[Recipe] = post("parse" :: jsonBody[URL]) { u: URL => execute(u.name).map(Ok) }
+  val parseEndpoint: Endpoint[Recipe] = post("parse" :: jsonBody[URL]) { u: URL => execute(u.address).map(Ok) }
   val service = parseEndpoint.toServiceAs[Application.Json]
 
   val policy: Cors.Policy = Cors.Policy(
