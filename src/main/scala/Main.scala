@@ -1,7 +1,7 @@
 import AppConfig._
 import org.jsoup.Jsoup
 import org.jsoup.nodes.{Document, Element}
-import org.openqa.selenium.{By, JavascriptExecutor, WebElement}
+import org.openqa.selenium.{By, JavascriptExecutor}
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.support.ui.{ExpectedConditions, WebDriverWait}
 import com.twitter.finagle.http.filter.Cors
