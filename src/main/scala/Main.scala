@@ -1,10 +1,9 @@
 import AppConfig._
 import org.jsoup.Jsoup
 import org.jsoup.nodes.{Document, Element}
-import org.openqa.selenium.{JavascriptExecutor, WebDriver, WebElement}
+import org.openqa.selenium.{By, JavascriptExecutor, WebElement}
 import org.openqa.selenium.chrome.ChromeDriver
-import org.openqa.selenium.support.ui.WebDriverWait
-
+import org.openqa.selenium.support.ui.{ExpectedConditions, WebDriverWait}
 import com.twitter.finagle.http.filter.Cors
 import com.twitter.finagle.{Http, Service}
 import com.twitter.finagle.builder.ClientBuilder
@@ -22,7 +21,6 @@ import io.circe.generic.semiauto._
 import io.finch._
 import io.finch.syntax._
 import io.finch.circe._
-
 import com.hypertino.inflector.English
 
 case class Ingredient(name: String, unit: Option[String], qty: Option[String])
@@ -39,26 +37,19 @@ object Main extends App {
   implicit val decodeURL: Decoder[URL] = deriveDecoder
 
   def loadHTMLWithJsoup(u: String): Document = Jsoup.connect(u).timeout(10000).get
-  // doc.select("[ng-cloak]").remove()
 
-  def waitUntilLoaded(d: WebDriver): Boolean =
-    new WebDriverWait(d, 15).until { d: WebDriver => d
-      .asInstanceOf[JavascriptExecutor]
-      .executeScript("return document.readyState")
-      .equals("complete")
-    }
-
-  // TODO: come up with interface to execute javascript from driver based on domain
-  def loadHTMLWithSelenium(u: String): Document = {
+  def loadHTMLWithSelenium(u: String, className: String): Document = {
     val driver = new ChromeDriver()
     driver.get(u)
     driver.asInstanceOf[JavascriptExecutor].executeScript("window.scrollBy(0, 2500)")
-    val loaded = waitUntilLoaded(driver) // maybe use this in a while loop?
+    new WebDriverWait(driver, 15).until(
+      ExpectedConditions.presenceOfElementLocated(By.className(className))
+    )
     Jsoup.parse(driver.getPageSource)
   }
 
-  def loadHTML(u: String): Document = seleniumDomains.find(d => u contains d) match {
-    case Some(_) => loadHTMLWithSelenium(u)
+  def loadHTML(u: String): Document = seleniumDomains.find(d => u contains d.domain) match {
+    case Some(domain) => loadHTMLWithSelenium(u, domain.className)
     case None => loadHTMLWithJsoup(u)
   }
 
@@ -109,7 +100,10 @@ object Main extends App {
     val request: Request = RequestBuilder()
       .url("http://localhost:4000/jsonrpc")
       .buildPost(Buf.Utf8(jsonString))
-    client(request).map(_.contentString)
+    client(request).map(s => {
+      println(s.contentString)
+      s.contentString
+    })
   }
 
   def callValidator(i: Ingredient): Future[String] = {
