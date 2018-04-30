@@ -22,11 +22,11 @@ RUN \
   apt-get install sbt && \
   sbt sbtVersion
 
-COPY . $HOME/ingredientScraper
+COPY . $HOME/ingredient-scraper
 
 RUN addgroup app && adduser --ingroup app app && \
-    chown -R app:app $HOME/*
+    chown -R app:app /home/*
 USER app
 
-WORKDIR $HOME/ingredientScraper
+WORKDIR $HOME/ingredient-scraper
 CMD sbt run
